@@ -28,7 +28,7 @@ git push -u origin main
 1. https://console.neon.tech → **New project** → name `smart-farm`, Postgres **16**, region **AWS Asia Pacific (Singapore)** (closest to India).
 2. **Dashboard → Connect** → toggle **Connection pooling ON** → copy the string. It looks like:
    `postgres://neondb_owner:xxxx@ep-cool-name-123456-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require`
-3. Create the schema and seed data **from your computer**. This is faster than doing it from Render and keeps Render's build simple:
+3. Create the schema and seed data. **Easiest:** do nothing — the Render build command (`render.yaml`) runs `db:migrate && db:seed`, which create the schema and load the data on the first deploy and are no-ops afterwards. **Or** run it from your computer:
    ```bash
    cd backend
    npm ci

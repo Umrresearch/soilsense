@@ -7,7 +7,8 @@ services:
     plan: free
     region: singapore           # closest Render region to India
     rootDir: backend
-    buildCommand: npm ci
+    # migrate is a no-op when the schema exists; seed skips when farmers exist → safe on every deploy
+    buildCommand: npm ci && npm run db:migrate && npm run db:seed
     startCommand: npm start
     healthCheckPath: /api/health
     autoDeploy: true
