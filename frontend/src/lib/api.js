@@ -2,7 +2,9 @@
 // In dev VITE_API_URL is empty and Vite proxies /api → http://localhost:4000.
 const rawApi = (import.meta.env.VITE_API_URL || '').trim().replace(/\/$/, '');
 // a bare hostname (as injected by the Render blueprint) is treated as https://host
-export const API_URL = rawApi && !/^https?:\/\//.test(rawApi) ? `https://${rawApi}` : rawApi;
+// Render's `fromService.host` gives the internal name (e.g. soilsense-api-9p53); its public URL is <name>.onrender.com
+const withDomain = (h) => (h && !h.includes('.') && !h.startsWith('localhost') ? `${h}.onrender.com` : h);
+export const API_URL = rawApi && !/^https?:\/\//.test(rawApi) ? `https://${withDomain(rawApi)}` : rawApi;
 
 const KEY = 'sfa_session';
 

@@ -8,6 +8,10 @@ const required = (name, fallback) => {
 
 const isProd = process.env.NODE_ENV === 'production';
 
+// Render's blueprint `fromService.host` yields the internal service name (e.g. soilsense-web);
+// its public address is <name>.onrender.com
+const withDomain = (h) => (h && !h.includes('.') && !h.startsWith('localhost') ? `${h}.onrender.com` : h);
+
 export const config = {
   env: process.env.NODE_ENV || 'development',
   isProd,
@@ -21,10 +25,10 @@ export const config = {
   // bare hostnames (e.g. injected by a Render blueprint) are treated as https://host
   corsOrigins: (process.env.CORS_ORIGINS || 'http://localhost:5173')
     .split(',').map((s) => s.trim().replace(/\/$/, '')).filter(Boolean)
-    .map((s) => (/^https?:\/\//.test(s) || s.startsWith('*.') || s === '*' ? s : `https://${s}`)),
+    .map((s) => (/^https?:\/\//.test(s) || s.startsWith('*.') || s === '*' ? s : `https://${withDomain(s)}`)),
   // Shared key that IoT gateways send as X-Device-Key when uploading readings
   ingestApiKey: process.env.INGEST_API_KEY || '',
-  appUrl: ((u) => (/^https?:\/\//.test(u) ? u : `https://${u}`))(process.env.APP_URL || 'http://localhost:5173'),
+  appUrl: ((u) => (/^https?:\/\//.test(u) ? u : `https://${withDomain(u)}`))(process.env.APP_URL || 'http://localhost:5173'),
   smtp: process.env.SMTP_HOST
     ? {
         host: process.env.SMTP_HOST,
