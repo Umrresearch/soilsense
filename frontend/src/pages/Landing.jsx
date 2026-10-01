@@ -41,7 +41,7 @@ export default function Landing() {
             <span className="eyebrow"><Droplets size={14} aria-hidden /> For sugarcane farmers</span>
             <h1>Water and feed your cane <em>at the right time</em>.</h1>
             <p className="hero-lead">
-              Field sensors measure soil moisture, temperature and humidity. Smart Farm turns those readings into
+              Field sensors measure soil moisture, temperature and humidity. SoilSense turns those readings into
               simple, explained advice on irrigation and fertilizer — so you save water, money and effort.
             </p>
             <div className="row">
@@ -49,7 +49,7 @@ export default function Landing() {
               {!farmer && <Link className="btn btn-lg" to="/login">I have an account</Link>}
             </div>
             <p className="muted" style={{ marginTop: 'var(--sp-4)', fontSize: 'var(--fs-sm)' }}>
-              Try the demo: <span className="num">demo@smartfarm.in</span> / <span className="num">Demo@1234</span>
+              Try the demo: <span className="num">demo@soilsense.in</span> / <span className="num">Demo@1234</span>
             </p>
           </div>
 
@@ -112,13 +112,13 @@ export default function Landing() {
         <div className="footer-inner">
           <div className="stack" style={{ gap: 8 }}>
             <Logo />
-            <span>Smart Sugarcane Farm Advisory System</span>
+            <span>SoilSense — Smart Sugarcane Farm Advisory</span>
           </div>
           <div className="stack" style={{ gap: 6 }}>
             <span className="row" style={{ gap: 6 }}><ShieldCheck size={16} aria-hidden /> Passwords are hashed; your data is yours.</span>
             <span className="row" style={{ gap: 6 }}><Smartphone size={16} aria-hidden /> Works on any phone browser.</span>
           </div>
-          <div>© {new Date().getFullYear()} Smart Farm Advisory · Advice is indicative — confirm with your local KVK.</div>
+          <div>© {new Date().getFullYear()} SoilSense · Advice is indicative — confirm with your local KVK.</div>
         </div>
       </footer>
     </>

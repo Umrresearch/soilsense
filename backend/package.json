@@ -1,7 +1,7 @@
 {
-  "name": "smart-farm-backend",
+  "name": "soilsense-backend",
   "version": "1.0.0",
-  "description": "Express + PostgreSQL API for the Smart Sugarcane Farm Advisory System",
+  "description": "Express + PostgreSQL API for the SoilSense — Smart Sugarcane Farm Advisory",
   "type": "module",
   "main": "src/server.js",
   "engines": {

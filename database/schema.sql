@@ -1,5 +1,5 @@
 -- =====================================================================
---  Smart Sugarcane Farm Advisory System — PostgreSQL schema (3NF)
+--  SoilSense — Smart Sugarcane Farm Advisory — PostgreSQL schema (3NF)
 --  Target: PostgreSQL 15+ (Neon / Supabase / Render / local)
 --
 --  Core tables (from the project poster):

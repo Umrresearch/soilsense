@@ -69,12 +69,12 @@ test('duplicate e-mail → 409', async () => {
 });
 
 test('login with email, phone and Farmer ID', async () => {
-  for (const identifier of ['demo@smartfarm.in', '9000000051', 'frm-0051']) {
+  for (const identifier of ['demo@soilsense.in', '9000000051', 'frm-0051']) {
     const r = await api('POST', '/api/auth/login', { auth: null, body: { identifier, password: 'Demo@1234', remember: true } });
     assert.equal(r.status, 200, identifier);
     demoToken = r.data.token;
   }
-  const bad = await api('POST', '/api/auth/login', { auth: null, body: { identifier: 'demo@smartfarm.in', password: 'nope' } });
+  const bad = await api('POST', '/api/auth/login', { auth: null, body: { identifier: 'demo@soilsense.in', password: 'nope' } });
   assert.equal(bad.status, 401);
 });
 

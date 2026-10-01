@@ -18,9 +18,9 @@ export const NAV = [
 const TITLES = { '/app': 'Dashboard', '/app/sensors': 'Sensor data', '/app/recommendations': 'Recommendations', '/app/analytics': 'Analytics', '/app/settings': 'Settings' };
 
 export const Logo = ({ sub = 'Sugarcane advisory' }) => (
-  <Link to="/" className="brand" aria-label="Smart Farm Advisory home">
+  <Link to="/" className="brand" aria-label="SoilSense home">
     <span className="brand-mark"><Sprout aria-hidden /></span>
-    <span className="brand-name">Smart Farm<small>{sub}</small></span>
+    <span className="brand-name">SoilSense<small>{sub}</small></span>
   </Link>
 );
 
@@ -66,7 +66,7 @@ export default function AppShell() {
       <div className="main">
         <header className="topbar">
           <button className="btn btn-ghost icon-btn mobile-only" onClick={() => setDrawer(true)} aria-label="Open menu"><Menu /></button>
-          <h1>{TITLES[loc.pathname] ?? 'Smart Farm'}</h1>
+          <h1>{TITLES[loc.pathname] ?? 'SoilSense'}</h1>
           <div className="spacer" />
           <span className={`live-dot ${live ? 'on' : ''}`} title={live ? 'Receiving live sensor updates' : 'Live updates paused — refreshing every minute'}>
             <i aria-hidden /><span className="desktop-only">{live ? 'Live' : 'Polling'}</span>

@@ -4,7 +4,7 @@ import { pool } from './db.js';
 
 const app = createApp();
 const server = app.listen(config.port, () => {
-  console.log(`🌾 Smart Farm API listening on :${config.port} (${config.env})`);
+  console.log(`🌾 SoilSense API listening on :${config.port} (${config.env})`);
 });
 
 // graceful shutdown (Render/Railway send SIGTERM on deploy)

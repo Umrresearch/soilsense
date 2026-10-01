@@ -3,7 +3,7 @@
 # The database lives on Neon (Render's free Postgres is deleted after 30 days).
 services:
   - type: web
-    name: smart-farm-api
+    name: soilsense-api
     runtime: node
     plan: free
     region: singapore           # closest Render region to India
@@ -28,17 +28,17 @@ services:
         generateValue: true
       - key: CORS_ORIGINS       # the static site's hostname (https:// is added automatically)
         fromService:
-          name: smart-farm-web
+          name: soilsense-web
           type: web
           property: host
       - key: APP_URL
         fromService:
-          name: smart-farm-web
+          name: soilsense-web
           type: web
           property: host
 
   - type: web
-    name: smart-farm-web
+    name: soilsense-web
     runtime: static
     rootDir: frontend
     buildCommand: npm ci && npm run build
@@ -58,6 +58,6 @@ services:
         value: "22"
       - key: VITE_API_URL       # API hostname (https:// is added automatically)
         fromService:
-          name: smart-farm-api
+          name: soilsense-api
           type: web
           property: host

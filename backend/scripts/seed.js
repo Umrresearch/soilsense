@@ -7,7 +7,7 @@
  *
  * What gets created
  *   • 50 farmers + 130 fields + 3,000 crop records from the spreadsheet (passwords pre-hashed)
- *   • 1 demo farmer (demo@smartfarm.in / Demo@1234) with 3 fields
+ *   • 1 demo farmer (demo@soilsense.in / Demo@1234) with 3 fields
  *   • 3 sensors per field (soil moisture, temperature, humidity)
  *   • readings with diurnal cycles, drying curves, irrigation events, ~2.5 % random gaps
  *     and a few sensors with ongoing outages (to exercise missing-data handling)
@@ -66,7 +66,7 @@ async function main() {
 
   // ---------- demo account (so testers don't need the spreadsheet passwords)
   const demo = {
-    farmer_id: 'FRM-0051', name: 'Demo Farmer', email: 'demo@smartfarm.in', phone: '9000000051',
+    farmer_id: 'FRM-0051', name: 'Demo Farmer', email: 'demo@soilsense.in', phone: '9000000051',
     password_hash: bcrypt.hashSync('Demo@1234', 10), age: 40, gender: 'Male',
     village: 'Bahadrabad', district: 'Haridwar', state: 'Uttarakhand', created_at: new Date().toISOString(),
   };
@@ -255,7 +255,7 @@ async function main() {
     pending += r.created;
   }
   console.log(`✓ engine produced ${pending} current recommendations`);
-  console.log(`Done in ${((Date.now() - t0) / 1000).toFixed(1)} s.  Demo login: demo@smartfarm.in / Demo@1234`);
+  console.log(`Done in ${((Date.now() - t0) / 1000).toFixed(1)} s.  Demo login: demo@soilsense.in / Demo@1234`);
 }
 
 main().catch((e) => { console.error(e); process.exitCode = 1; }).finally(() => pool.end());

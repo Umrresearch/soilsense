@@ -81,7 +81,7 @@ async function buildReport(farmerId) {
 
   const EMERALD = '#047857';
   doc.rect(0, 0, doc.page.width, 80).fill('#062E22');
-  doc.fill('#ECFDF5').fontSize(20).text('Smart Farm Advisory — Farm Report', 48, 26);
+  doc.fill('#ECFDF5').fontSize(20).text('SoilSense — Farm Report', 48, 26);
   doc.fontSize(10).fill('#A7F3D0').text(`Generated ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST`, 48, 52);
   doc.moveDown(3).fill('#111').fontSize(12)
     .text(`${farmer.name}  ·  ${farmer.farmer_id}`, 48, 100)
@@ -127,7 +127,7 @@ r.get('/report.pdf', ah(async (req, res) => {
 r.post('/email', ah(async (req, res) => {
   if (!mailEnabled()) throw new ApiError(501, 'EMAIL_NOT_CONFIGURED', 'E-mail delivery is not configured on this server (set SMTP_* variables)');
   const { pdf, farmer } = await buildReport(req.user.farmerId);
-  await sendMail(farmer.email, 'Your Smart Farm report', `Namaste ${farmer.name},\n\nYour farm report is attached.\n`,
+  await sendMail(farmer.email, 'Your SoilSense report', `Namaste ${farmer.name},\n\nYour farm report is attached.\n`,
     [{ filename: 'farm-report.pdf', content: pdf }]);
   res.json({ message: `Report sent to ${farmer.email}` });
 }));

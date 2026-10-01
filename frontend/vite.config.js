@@ -2,7 +2,7 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
 // In development, /api is proxied to the Express server so no CORS setup is needed.
-// In production set VITE_API_URL to the deployed backend (e.g. https://smart-farm-api.onrender.com).
+// In production set VITE_API_URL to the deployed backend (e.g. https://soilsense-api.onrender.com).
 export default defineConfig({
   plugins: [react()],
   server: {

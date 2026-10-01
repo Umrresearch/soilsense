@@ -50,7 +50,7 @@ export function createApp() {
       res.status(503).json({ status: 'degraded', db: 'unreachable', error: e.message });
     }
   });
-  app.get('/', (_req, res) => res.json({ name: 'Smart Farm Advisory API', docs: '/api/health', version: '1.0.0' }));
+  app.get('/', (_req, res) => res.json({ name: 'SoilSense API', docs: '/api/health', version: '1.0.0' }));
 
   app.use('/api/auth', auth);
   app.use('/api/farmers', farmers);

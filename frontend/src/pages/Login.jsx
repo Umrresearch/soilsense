@@ -62,7 +62,7 @@ export default function Login() {
           New here? <Link to="/signup">Create an account</Link>
         </p>
         <Alert tone="info" title="Demo account">
-          <span className="num">demo@smartfarm.in</span> · password <span className="num">Demo@1234</span>
+          <span className="num">demo@soilsense.in</span> · password <span className="num">Demo@1234</span>
         </Alert>
       </form>
     </AuthLayout>

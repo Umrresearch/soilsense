@@ -14,12 +14,12 @@ jobs:
         env:
           POSTGRES_USER: farm
           POSTGRES_PASSWORD: farm
-          POSTGRES_DB: smartfarm
+          POSTGRES_DB: soilsense
         ports: ["5432:5432"]
         options: >-
           --health-cmd "pg_isready -U farm" --health-interval 5s --health-timeout 5s --health-retries 10
     env:
-      DATABASE_URL: postgres://farm:farm@localhost:5432/smartfarm
+      DATABASE_URL: postgres://farm:farm@localhost:5432/soilsense
       JWT_SECRET: ci-secret
       INGEST_API_KEY: ci-device-key
       NODE_ENV: test

@@ -70,7 +70,7 @@ Rules: password ≥ 8 characters with a letter and a digit. Phone is an Indian m
 ```
 The farmer row and default `thresholds` row are written in one transaction (trigger). Errors: `400`, `409` (e-mail or phone taken). In non-production the response also includes `devVerificationToken`.
 
-**2 · login** — `{ "identifier": "FRM-0051" | "demo@smartfarm.in" | "9000000051", "password": "…", "remember": true }` → `200 { farmer, token, expiresAt }` · `401 Incorrect login details` (same message whether or not the account exists).
+**2 · login** — `{ "identifier": "FRM-0051" | "demo@soilsense.in" | "9000000051", "password": "…", "remember": true }` → `200 { farmer, token, expiresAt }` · `401 Incorrect login details` (same message whether or not the account exists).
 
 **3 · logout** → `200 { "message": "Logged out" }`. The token's `jti` is stored as REVOKED until it expires.
 
@@ -238,7 +238,7 @@ Open-Meteo current conditions plus a 3-day forecast at the field's coordinates, 
 ```bash
 API=http://localhost:4000
 TOKEN=$(curl -s $API/api/auth/login -H 'Content-Type: application/json' \
-  -d '{"identifier":"demo@smartfarm.in","password":"Demo@1234"}' | node -pe 'JSON.parse(require("fs").readFileSync(0)).token')
+  -d '{"identifier":"demo@soilsense.in","password":"Demo@1234"}' | node -pe 'JSON.parse(require("fs").readFileSync(0)).token')
 
 curl -s $API/api/dashboard/FRM-0051/summary -H "Authorization: Bearer $TOKEN" | head -c 400
 curl -s "$API/api/recommendations?status=PENDING" -H "Authorization: Bearer $TOKEN"

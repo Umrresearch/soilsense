@@ -1,4 +1,4 @@
-# 🌾 Smart Sugarcane Farm Advisory System
+# 🌾 SoilSense — Smart Sugarcane Farm Advisory
 
 A full-stack web app that turns field-sensor data (soil moisture, temperature, humidity) and soil tests into **plain-language irrigation and fertilizer recommendations** for sugarcane farmers. It uses a dark-emerald, mobile-first UI and runs entirely on free hosting.
 
@@ -25,7 +25,7 @@ More: [landing](docs/screenshots/landing.jpg) · [recommendations](docs/screensh
 
 ## Quick start (local, ~5 min)
 
-**Prerequisites:** Node 20+ and PostgreSQL 15+. Either use a local install, run `docker run -d -p 5432:5432 -e POSTGRES_USER=farm -e POSTGRES_PASSWORD=farm -e POSTGRES_DB=smartfarm postgres:16`, or create a free Neon database.
+**Prerequisites:** Node 20+ and PostgreSQL 15+. Either use a local install, run `docker run -d -p 5432:5432 -e POSTGRES_USER=farm -e POSTGRES_PASSWORD=farm -e POSTGRES_DB=soilsense postgres:16`, or create a free Neon database.
 
 ```bash
 # 1. backend
@@ -51,7 +51,7 @@ cd backend && npm test
 
 | Account | Login | Password |
 |---|---|---|
-| Demo farmer (3 fields, lively data) | `demo@smartfarm.in` · `9000000051` · `FRM-0051` | `Demo@1234` |
+| Demo farmer (3 fields, lively data) | `demo@soilsense.in` · `9000000051` · `FRM-0051` | `Demo@1234` |
 | Any of the 50 farmers from your spreadsheet | their e-mail, phone or Farmer ID (e.g. `rajendra.pundir@farmerconnect.in`) | their `Farmer_Password` from the sheet |
 
 ---
@@ -137,7 +137,7 @@ To re-import an updated workbook: `pip install pandas openpyxl bcrypt && python 
 ## Project structure
 
 ```
-smart-farm-advisory/
+soilsense/
 ├── database/
 │   ├── schema.sql              # 10 tables, view, triggers, constraints
 │   └── import_xlsx.py          # spreadsheet → seed JSON (hashes passwords)

@@ -66,7 +66,7 @@ r.post('/register', authLimiter, ah(async (req, res) => {
 
   // optional verification e-mail (logged to console when SMTP is not configured)
   const vt = await issueEmailToken(farmer.farmer_id, 'VERIFY', 48);
-  sendMail(farmer.email, 'Verify your Smart Farm account',
+  sendMail(farmer.email, 'Verify your SoilSense account',
     `Namaste ${farmer.name},\n\nYour Farmer ID is ${farmer.farmer_id}.\nVerify your e-mail: ${config.appUrl}/verify-email?token=${vt}\n`).catch(() => {});
 
   const { token, expiresAt } = signToken(farmer.farmer_id, true);
@@ -168,7 +168,7 @@ r.post('/verify-email', ah(async (req, res, next) => {
         const { rows: [f] } = await query('SELECT email, name, email_verified FROM farmers WHERE farmer_id = $1', [req.user.farmerId]);
         if (f.email_verified) return res.json({ message: 'E-mail already verified' });
         const vt = await issueEmailToken(req.user.farmerId, 'VERIFY', 48);
-        await sendMail(f.email, 'Verify your Smart Farm account', `Verify your e-mail: ${config.appUrl}/verify-email?token=${vt}`);
+        await sendMail(f.email, 'Verify your SoilSense account', `Verify your e-mail: ${config.appUrl}/verify-email?token=${vt}`);
         res.json({ message: 'Verification e-mail sent', ...(config.isProd ? {} : { devVerificationToken: vt }) });
       } catch (e) { next(e); }
     });
@@ -194,7 +194,7 @@ r.post('/forgot-password', authLimiter, ah(async (req, res) => {
   let devToken;
   if (f) {
     devToken = await issueEmailToken(f.farmer_id, 'RESET', 1);
-    await sendMail(email, 'Reset your Smart Farm password',
+    await sendMail(email, 'Reset your SoilSense password',
       `Namaste ${f.name},\n\nReset your password (valid for 1 hour): ${config.appUrl}/reset-password?token=${devToken}\n`);
   }
   // identical response whether or not the account exists
