@@ -1,4 +1,5 @@
-# Render Blueprint — New → Blueprint → pick this repo.
+# Render Blueprint — Dashboard → New → Blueprint → pick this repo.
+# Deploys BOTH the API (Node web service) and the React app (static site) on Render's free plan.
 # The database lives on Neon (Render's free Postgres is deleted after 30 days).
 services:
   - type: web
@@ -18,14 +19,45 @@ services:
       - key: NODE_VERSION
         value: "22"
       - key: DATABASE_URL
-        sync: false             # paste the Neon pooled connection string
+        sync: false             # paste the Neon pooled connection string when prompted
       - key: DATABASE_SSL
         value: "true"
       - key: JWT_SECRET
         generateValue: true
       - key: INGEST_API_KEY
         generateValue: true
-      - key: CORS_ORIGINS
-        sync: false             # e.g. https://smart-farm.pages.dev,*.smart-farm.pages.dev
+      - key: CORS_ORIGINS       # the static site's hostname (https:// is added automatically)
+        fromService:
+          name: smart-farm-web
+          type: web
+          property: host
       - key: APP_URL
-        sync: false             # e.g. https://smart-farm.pages.dev
+        fromService:
+          name: smart-farm-web
+          type: web
+          property: host
+
+  - type: web
+    name: smart-farm-web
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    autoDeploy: true
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+    routes:
+      - type: rewrite           # SPA: deep links like /app/sensors serve index.html
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: VITE_API_URL       # API hostname (https:// is added automatically)
+        fromService:
+          name: smart-farm-api
+          type: web
+          property: host

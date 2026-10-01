@@ -1,6 +1,8 @@
 // Thin fetch wrapper around the Express API.
 // In dev VITE_API_URL is empty and Vite proxies /api → http://localhost:4000.
-export const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '');
+const rawApi = (import.meta.env.VITE_API_URL || '').trim().replace(/\/$/, '');
+// a bare hostname (as injected by the Render blueprint) is treated as https://host
+export const API_URL = rawApi && !/^https?:\/\//.test(rawApi) ? `https://${rawApi}` : rawApi;
 
 const KEY = 'sfa_session';
 

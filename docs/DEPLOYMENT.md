@@ -1,5 +1,7 @@
 # Deployment Guide — ₹0 stack
 
+> **Fastest path (used for this project): everything on Render + Neon.** `render.yaml` defines two free services: `smart-farm-api` (Node) and `smart-farm-web` (static React site). They are wired to each other automatically (API URL ↔ CORS origin), and the API build creates and seeds the database. Steps: create a Neon project → Render **New → Blueprint** → pick the repo → paste the Neon connection string → **Apply**. The Cloudflare Pages route below is the alternative for unlimited CDN bandwidth.
+
 **Cloudflare Pages** (frontend) → **Render Free** (API) → **Neon Free** (PostgreSQL). Total time is about 30 minutes. You need GitHub, Neon, Render and Cloudflare accounts, all free. Only Render may ask for a card, and the free plan is not charged.
 
 ```

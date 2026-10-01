@@ -18,11 +18,13 @@ export const config = {
   jwtSecret: required('JWT_SECRET', isProd ? undefined : 'dev-only-secret-change-me'),
   jwtTtlShort: process.env.JWT_TTL || '1d',
   jwtTtlRemember: process.env.JWT_TTL_REMEMBER || '30d',
+  // bare hostnames (e.g. injected by a Render blueprint) are treated as https://host
   corsOrigins: (process.env.CORS_ORIGINS || 'http://localhost:5173')
-    .split(',').map((s) => s.trim()).filter(Boolean),
+    .split(',').map((s) => s.trim().replace(/\/$/, '')).filter(Boolean)
+    .map((s) => (/^https?:\/\//.test(s) || s.startsWith('*.') || s === '*' ? s : `https://${s}`)),
   // Shared key that IoT gateways send as X-Device-Key when uploading readings
   ingestApiKey: process.env.INGEST_API_KEY || '',
-  appUrl: process.env.APP_URL || 'http://localhost:5173',
+  appUrl: ((u) => (/^https?:\/\//.test(u) ? u : `https://${u}`))(process.env.APP_URL || 'http://localhost:5173'),
   smtp: process.env.SMTP_HOST
     ? {
         host: process.env.SMTP_HOST,
