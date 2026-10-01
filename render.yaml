@@ -1,0 +1,30 @@
+# Render Blueprint — New → Blueprint → pick this repo.
+# The database lives on Neon (Render's free Postgres is deleted after 30 days).
+services:
+  - type: web
+    name: smart-farm-api
+    runtime: node
+    plan: free
+    region: singapore           # closest Render region to India
+    rootDir: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        sync: false             # paste the Neon pooled connection string
+      - key: DATABASE_SSL
+        value: "true"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: INGEST_API_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        sync: false             # e.g. https://smart-farm.pages.dev,*.smart-farm.pages.dev
+      - key: APP_URL
+        sync: false             # e.g. https://smart-farm.pages.dev

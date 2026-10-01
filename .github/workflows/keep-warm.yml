@@ -1,0 +1,14 @@
+# Optional: ping the Render free instance so farmers rarely hit a cold start.
+# Set repository variable API_URL (Settings → Secrets and variables → Actions → Variables).
+# GitHub may delay scheduled runs; cron-job.org is a more punctual alternative.
+name: Keep API warm
+on:
+  schedule:
+    - cron: "*/10 2-17 * * *"   # every 10 min, 07:30–23:30 IST
+  workflow_dispatch:
+jobs:
+  ping:
+    if: ${{ vars.API_URL != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -fsS --max-time 90 "${{ vars.API_URL }}/api/health"

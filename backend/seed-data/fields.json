@@ -1,0 +1,2602 @@
+[
+{
+"field_id": "FLD-0001",
+"farmer_id": "FRM-0001",
+"field_name": "Khasra 4693",
+"khasra_no": 4693,
+"area_acres": 1.89,
+"soil_type": "Alluvial",
+"soil_ph": 7.12,
+"soil_ec": 1.54,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Bahadrabad",
+"latitude": 29.986521,
+"longitude": 78.108787,
+"_baseline": {
+"moisture": 28.37,
+"temp": 29.33,
+"humidity": 73.75
+}
+},
+{
+"field_id": "FLD-0002",
+"farmer_id": "FRM-0001",
+"field_name": "Khasra 8703",
+"khasra_no": 8703,
+"area_acres": 1.46,
+"soil_type": "Alluvial",
+"soil_ph": 7.25,
+"soil_ec": 1.37,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Bahadrabad",
+"latitude": 29.951065,
+"longitude": 78.154928,
+"_baseline": {
+"moisture": 22.53,
+"temp": 27.09,
+"humidity": 68.05
+}
+},
+{
+"field_id": "FLD-0003",
+"farmer_id": "FRM-0002",
+"field_name": "Khasra 4333",
+"khasra_no": 4333,
+"area_acres": 0.79,
+"soil_type": "Alluvial",
+"soil_ph": 7.24,
+"soil_ec": 1.54,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Bahadrabad",
+"latitude": 30.004163,
+"longitude": 78.146866,
+"_baseline": {
+"moisture": 23.98,
+"temp": 24.69,
+"humidity": 68.77
+}
+},
+{
+"field_id": "FLD-0004",
+"farmer_id": "FRM-0002",
+"field_name": "Khasra 7487",
+"khasra_no": 7487,
+"area_acres": 3.2,
+"soil_type": "Loamy",
+"soil_ph": 7.33,
+"soil_ec": 0.9,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Bahadrabad",
+"latitude": 29.981177,
+"longitude": 78.163335,
+"_baseline": {
+"moisture": 24.31,
+"temp": 28.37,
+"humidity": 71.78
+}
+},
+{
+"field_id": "FLD-0005",
+"farmer_id": "FRM-0003",
+"field_name": "Khasra 7419",
+"khasra_no": 7419,
+"area_acres": 0.75,
+"soil_type": "Sandy",
+"soil_ph": 7.3,
+"soil_ec": 1.14,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Bahadrabad",
+"latitude": 29.994691,
+"longitude": 78.156025,
+"_baseline": {
+"moisture": 26.33,
+"temp": 30.21,
+"humidity": 67.54
+}
+},
+{
+"field_id": "FLD-0006",
+"farmer_id": "FRM-0003",
+"field_name": "Khasra 627",
+"khasra_no": 627,
+"area_acres": 3.1,
+"soil_type": "Alluvial",
+"soil_ph": 7.38,
+"soil_ec": 1.37,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Bahadrabad",
+"latitude": 30.022449,
+"longitude": 78.164298,
+"_baseline": {
+"moisture": 24.48,
+"temp": 25.57,
+"humidity": 70.85
+}
+},
+{
+"field_id": "FLD-0007",
+"farmer_id": "FRM-0003",
+"field_name": "Khasra 6524",
+"khasra_no": 6524,
+"area_acres": 3.79,
+"soil_type": "Sandy",
+"soil_ph": 7.46,
+"soil_ec": 1.16,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Bahadrabad",
+"latitude": 29.949026,
+"longitude": 78.136733,
+"_baseline": {
+"moisture": 25.73,
+"temp": 32.09,
+"humidity": 71.09
+}
+},
+{
+"field_id": "FLD-0008",
+"farmer_id": "FRM-0004",
+"field_name": "Khasra 4623",
+"khasra_no": 4623,
+"area_acres": 1.43,
+"soil_type": "Clay",
+"soil_ph": 7.3,
+"soil_ec": 1.27,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Bahadrabad",
+"latitude": 30.019229,
+"longitude": 78.158915,
+"_baseline": {
+"moisture": 23.27,
+"temp": 28.79,
+"humidity": 71.71
+}
+},
+{
+"field_id": "FLD-0009",
+"farmer_id": "FRM-0004",
+"field_name": "Khasra 7632",
+"khasra_no": 7632,
+"area_acres": 3.18,
+"soil_type": "Loamy",
+"soil_ph": 7.31,
+"soil_ec": 1.09,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Bahadrabad",
+"latitude": 29.987943,
+"longitude": 78.147663,
+"_baseline": {
+"moisture": 24.49,
+"temp": 27.4,
+"humidity": 69.14
+}
+},
+{
+"field_id": "FLD-0010",
+"farmer_id": "FRM-0005",
+"field_name": "Khasra 5840",
+"khasra_no": 5840,
+"area_acres": 3.43,
+"soil_type": "Clay",
+"soil_ph": 7.24,
+"soil_ec": 1.07,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Bahadrabad",
+"latitude": 29.997213,
+"longitude": 78.160193,
+"_baseline": {
+"moisture": 25.7,
+"temp": 27.44,
+"humidity": 69.28
+}
+},
+{
+"field_id": "FLD-0011",
+"farmer_id": "FRM-0005",
+"field_name": "Khasra 1642",
+"khasra_no": 1642,
+"area_acres": 3.43,
+"soil_type": "Loamy",
+"soil_ph": 7.12,
+"soil_ec": 1.25,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Bahadrabad",
+"latitude": 30.026315,
+"longitude": 78.145396,
+"_baseline": {
+"moisture": 26.99,
+"temp": 28.18,
+"humidity": 68.62
+}
+},
+{
+"field_id": "FLD-0012",
+"farmer_id": "FRM-0005",
+"field_name": "Khasra 4058",
+"khasra_no": 4058,
+"area_acres": 1.92,
+"soil_type": "Sandy",
+"soil_ph": 7.35,
+"soil_ec": 1.16,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Bahadrabad",
+"latitude": 29.992516,
+"longitude": 78.135943,
+"_baseline": {
+"moisture": 25.72,
+"temp": 28.35,
+"humidity": 69.14
+}
+},
+{
+"field_id": "FLD-0013",
+"farmer_id": "FRM-0006",
+"field_name": "Khasra 969",
+"khasra_no": 969,
+"area_acres": 2.86,
+"soil_type": "Clay",
+"soil_ph": 7.12,
+"soil_ec": 1.29,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Bahadrabad",
+"latitude": 29.971385,
+"longitude": 78.169245,
+"_baseline": {
+"moisture": 25.55,
+"temp": 25.74,
+"humidity": 69.84
+}
+},
+{
+"field_id": "FLD-0014",
+"farmer_id": "FRM-0006",
+"field_name": "Khasra 1024",
+"khasra_no": 1024,
+"area_acres": 2.66,
+"soil_type": "Clay",
+"soil_ph": 7.17,
+"soil_ec": 1.44,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Bahadrabad",
+"latitude": 30.012219,
+"longitude": 78.163707,
+"_baseline": {
+"moisture": 18.24,
+"temp": 27.33,
+"humidity": 68.3
+}
+},
+{
+"field_id": "FLD-0015",
+"farmer_id": "FRM-0006",
+"field_name": "Khasra 4691",
+"khasra_no": 4691,
+"area_acres": 1.6,
+"soil_type": "Alluvial",
+"soil_ph": 7.01,
+"soil_ec": 1.16,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Bahadrabad",
+"latitude": 29.982366,
+"longitude": 78.170722,
+"_baseline": {
+"moisture": 26.28,
+"temp": 29.84,
+"humidity": 73.58
+}
+},
+{
+"field_id": "FLD-0016",
+"farmer_id": "FRM-0007",
+"field_name": "Khasra 2451",
+"khasra_no": 2451,
+"area_acres": 1.84,
+"soil_type": "Sandy",
+"soil_ph": 7.33,
+"soil_ec": 1.41,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Bahadrabad",
+"latitude": 30.05771,
+"longitude": 78.181681,
+"_baseline": {
+"moisture": 25.94,
+"temp": 30.53,
+"humidity": 73.02
+}
+},
+{
+"field_id": "FLD-0017",
+"farmer_id": "FRM-0007",
+"field_name": "Khasra 8537",
+"khasra_no": 8537,
+"area_acres": 3.32,
+"soil_type": "Loamy",
+"soil_ph": 7.13,
+"soil_ec": 1.17,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Bahadrabad",
+"latitude": 30.028113,
+"longitude": 78.147076,
+"_baseline": {
+"moisture": 27.49,
+"temp": 28.63,
+"humidity": 67.14
+}
+},
+{
+"field_id": "FLD-0018",
+"farmer_id": "FRM-0008",
+"field_name": "Khasra 285",
+"khasra_no": 285,
+"area_acres": 1.83,
+"soil_type": "Sandy",
+"soil_ph": 7.3,
+"soil_ec": 1.05,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Dhanauri",
+"latitude": 29.999187,
+"longitude": 78.138112,
+"_baseline": {
+"moisture": 22.15,
+"temp": 27.36,
+"humidity": 70.59
+}
+},
+{
+"field_id": "FLD-0019",
+"farmer_id": "FRM-0008",
+"field_name": "Khasra 4946",
+"khasra_no": 4946,
+"area_acres": 3.01,
+"soil_type": "Clay",
+"soil_ph": 7.15,
+"soil_ec": 1.12,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.01665,
+"longitude": 78.156491,
+"_baseline": {
+"moisture": 22.35,
+"temp": 27.72,
+"humidity": 74.9
+}
+},
+{
+"field_id": "FLD-0020",
+"farmer_id": "FRM-0009",
+"field_name": "Khasra 3387",
+"khasra_no": 3387,
+"area_acres": 2.52,
+"soil_type": "Clay",
+"soil_ph": 7.42,
+"soil_ec": 1.34,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Dhanauri",
+"latitude": 29.997416,
+"longitude": 78.172494,
+"_baseline": {
+"moisture": 27.17,
+"temp": 24.09,
+"humidity": 67.78
+}
+},
+{
+"field_id": "FLD-0021",
+"farmer_id": "FRM-0009",
+"field_name": "Khasra 1637",
+"khasra_no": 1637,
+"area_acres": 2.13,
+"soil_type": "Loamy",
+"soil_ph": 7.35,
+"soil_ec": 1.44,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.027469,
+"longitude": 78.145065,
+"_baseline": {
+"moisture": 22.7,
+"temp": 26.31,
+"humidity": 68.64
+}
+},
+{
+"field_id": "FLD-0022",
+"farmer_id": "FRM-0009",
+"field_name": "Khasra 7536",
+"khasra_no": 7536,
+"area_acres": 2.54,
+"soil_type": "Alluvial",
+"soil_ph": 7.19,
+"soil_ec": 1.4,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.057425,
+"longitude": 78.128581,
+"_baseline": {
+"moisture": 21.35,
+"temp": 24.45,
+"humidity": 68.16
+}
+},
+{
+"field_id": "FLD-0023",
+"farmer_id": "FRM-0010",
+"field_name": "Khasra 8447",
+"khasra_no": 8447,
+"area_acres": 2.85,
+"soil_type": "Clay",
+"soil_ph": 7.17,
+"soil_ec": 1.43,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.006651,
+"longitude": 78.144489,
+"_baseline": {
+"moisture": 28.78,
+"temp": 27.77,
+"humidity": 71.64
+}
+},
+{
+"field_id": "FLD-0024",
+"farmer_id": "FRM-0010",
+"field_name": "Khasra 6566",
+"khasra_no": 6566,
+"area_acres": 2.49,
+"soil_type": "Sandy",
+"soil_ph": 7.33,
+"soil_ec": 1.14,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Dhanauri",
+"latitude": 30.014241,
+"longitude": 78.177978,
+"_baseline": {
+"moisture": 21.15,
+"temp": 28.73,
+"humidity": 66.26
+}
+},
+{
+"field_id": "FLD-0025",
+"farmer_id": "FRM-0011",
+"field_name": "Khasra 376",
+"khasra_no": 376,
+"area_acres": 2.63,
+"soil_type": "Alluvial",
+"soil_ph": 7.18,
+"soil_ec": 1.32,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Dhanauri",
+"latitude": 30.036789,
+"longitude": 78.161709,
+"_baseline": {
+"moisture": 20.83,
+"temp": 28.96,
+"humidity": 67.96
+}
+},
+{
+"field_id": "FLD-0026",
+"farmer_id": "FRM-0011",
+"field_name": "Khasra 948",
+"khasra_no": 948,
+"area_acres": 3.39,
+"soil_type": "Loamy",
+"soil_ph": 7.18,
+"soil_ec": 1.11,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.007323,
+"longitude": 78.165281,
+"_baseline": {
+"moisture": 26.13,
+"temp": 26.17,
+"humidity": 70.23
+}
+},
+{
+"field_id": "FLD-0027",
+"farmer_id": "FRM-0012",
+"field_name": "Khasra 9013",
+"khasra_no": 9013,
+"area_acres": 2.21,
+"soil_type": "Clay",
+"soil_ph": 7.04,
+"soil_ec": 1.4,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Dhanauri",
+"latitude": 30.012734,
+"longitude": 78.116603,
+"_baseline": {
+"moisture": 27.82,
+"temp": 22.1,
+"humidity": 70.51
+}
+},
+{
+"field_id": "FLD-0028",
+"farmer_id": "FRM-0012",
+"field_name": "Khasra 5155",
+"khasra_no": 5155,
+"area_acres": 2.67,
+"soil_type": "Sandy",
+"soil_ph": 7.29,
+"soil_ec": 1.43,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.019606,
+"longitude": 78.151675,
+"_baseline": {
+"moisture": 26.52,
+"temp": 31.05,
+"humidity": 67.52
+}
+},
+{
+"field_id": "FLD-0029",
+"farmer_id": "FRM-0012",
+"field_name": "Khasra 9143",
+"khasra_no": 9143,
+"area_acres": 2.18,
+"soil_type": "Sandy",
+"soil_ph": 7.23,
+"soil_ec": 1.23,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Dhanauri",
+"latitude": 30.015621,
+"longitude": 78.134348,
+"_baseline": {
+"moisture": 26.23,
+"temp": 26.94,
+"humidity": 72.11
+}
+},
+{
+"field_id": "FLD-0030",
+"farmer_id": "FRM-0013",
+"field_name": "Khasra 5002",
+"khasra_no": 5002,
+"area_acres": 2.95,
+"soil_type": "Alluvial",
+"soil_ph": 7.23,
+"soil_ec": 1.2,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.049853,
+"longitude": 78.19335,
+"_baseline": {
+"moisture": 24.51,
+"temp": 30.61,
+"humidity": 67.12
+}
+},
+{
+"field_id": "FLD-0031",
+"farmer_id": "FRM-0013",
+"field_name": "Khasra 5587",
+"khasra_no": 5587,
+"area_acres": 2.27,
+"soil_type": "Loamy",
+"soil_ph": 7.1,
+"soil_ec": 1.31,
+"ownership_type": "Leased",
+"irrigation_method": "Sprinkler",
+"village": "Dhanauri",
+"latitude": 30.045916,
+"longitude": 78.141502,
+"_baseline": {
+"moisture": 25.22,
+"temp": 24.56,
+"humidity": 70.52
+}
+},
+{
+"field_id": "FLD-0032",
+"farmer_id": "FRM-0014",
+"field_name": "Khasra 4859",
+"khasra_no": 4859,
+"area_acres": 3.44,
+"soil_type": "Loamy",
+"soil_ph": 7.24,
+"soil_ec": 1.09,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Dhanauri",
+"latitude": 30.037021,
+"longitude": 78.148291,
+"_baseline": {
+"moisture": 22.19,
+"temp": 29.09,
+"humidity": 73.07
+}
+},
+{
+"field_id": "FLD-0033",
+"farmer_id": "FRM-0014",
+"field_name": "Khasra 1820",
+"khasra_no": 1820,
+"area_acres": 4.2,
+"soil_type": "Alluvial",
+"soil_ph": 7.31,
+"soil_ec": 1.41,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Dhanauri",
+"latitude": 29.983189,
+"longitude": 78.137118,
+"_baseline": {
+"moisture": 26.94,
+"temp": 27.95,
+"humidity": 71.09
+}
+},
+{
+"field_id": "FLD-0034",
+"farmer_id": "FRM-0015",
+"field_name": "Khasra 7425",
+"khasra_no": 7425,
+"area_acres": 1.2,
+"soil_type": "Loamy",
+"soil_ph": 7.42,
+"soil_ec": 1.63,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Iqbalpur",
+"latitude": 29.99111,
+"longitude": 78.134445,
+"_baseline": {
+"moisture": 26.77,
+"temp": 26.88,
+"humidity": 71.05
+}
+},
+{
+"field_id": "FLD-0035",
+"farmer_id": "FRM-0015",
+"field_name": "Khasra 363",
+"khasra_no": 363,
+"area_acres": 4.85,
+"soil_type": "Loamy",
+"soil_ph": 7.33,
+"soil_ec": 1.41,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Iqbalpur",
+"latitude": 29.987703,
+"longitude": 78.135851,
+"_baseline": {
+"moisture": 23.04,
+"temp": 28.09,
+"humidity": 71.26
+}
+},
+{
+"field_id": "FLD-0036",
+"farmer_id": "FRM-0016",
+"field_name": "Khasra 2808",
+"khasra_no": 2808,
+"area_acres": 4.36,
+"soil_type": "Clay",
+"soil_ph": 7.42,
+"soil_ec": 1.26,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Iqbalpur",
+"latitude": 30.001638,
+"longitude": 78.168568,
+"_baseline": {
+"moisture": 24.98,
+"temp": 27.46,
+"humidity": 69.64
+}
+},
+{
+"field_id": "FLD-0037",
+"farmer_id": "FRM-0016",
+"field_name": "Khasra 8180",
+"khasra_no": 8180,
+"area_acres": 1.63,
+"soil_type": "Alluvial",
+"soil_ph": 7.32,
+"soil_ec": 1.28,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 29.970143,
+"longitude": 78.154942,
+"_baseline": {
+"moisture": 26.24,
+"temp": 26.74,
+"humidity": 69.93
+}
+},
+{
+"field_id": "FLD-0038",
+"farmer_id": "FRM-0016",
+"field_name": "Khasra 7262",
+"khasra_no": 7262,
+"area_acres": 7.98,
+"soil_type": "Sandy",
+"soil_ph": 7.22,
+"soil_ec": 1.14,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 29.999708,
+"longitude": 78.142543,
+"_baseline": {
+"moisture": 21.46,
+"temp": 26.31,
+"humidity": 68.18
+}
+},
+{
+"field_id": "FLD-0039",
+"farmer_id": "FRM-0017",
+"field_name": "Khasra 3379",
+"khasra_no": 3379,
+"area_acres": 2.71,
+"soil_type": "Clay",
+"soil_ph": 7.19,
+"soil_ec": 0.72,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 29.978797,
+"longitude": 78.152785,
+"_baseline": {
+"moisture": 28.06,
+"temp": 32.01,
+"humidity": 69.79
+}
+},
+{
+"field_id": "FLD-0040",
+"farmer_id": "FRM-0017",
+"field_name": "Khasra 4967",
+"khasra_no": 4967,
+"area_acres": 3.13,
+"soil_type": "Sandy",
+"soil_ph": 7.4,
+"soil_ec": 1.22,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Iqbalpur",
+"latitude": 29.986121,
+"longitude": 78.162532,
+"_baseline": {
+"moisture": 27.28,
+"temp": 27.81,
+"humidity": 70.68
+}
+},
+{
+"field_id": "FLD-0041",
+"farmer_id": "FRM-0017",
+"field_name": "Khasra 3596",
+"khasra_no": 3596,
+"area_acres": 5.64,
+"soil_type": "Loamy",
+"soil_ph": 7.39,
+"soil_ec": 1.15,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Iqbalpur",
+"latitude": 29.943969,
+"longitude": 78.16053,
+"_baseline": {
+"moisture": 24.9,
+"temp": 26.67,
+"humidity": 69.96
+}
+},
+{
+"field_id": "FLD-0042",
+"farmer_id": "FRM-0018",
+"field_name": "Khasra 9542",
+"khasra_no": 9542,
+"area_acres": 1.76,
+"soil_type": "Sandy",
+"soil_ph": 7.21,
+"soil_ec": 1.23,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Iqbalpur",
+"latitude": 30.044104,
+"longitude": 78.110971,
+"_baseline": {
+"moisture": 26.06,
+"temp": 25.99,
+"humidity": 65.8
+}
+},
+{
+"field_id": "FLD-0043",
+"farmer_id": "FRM-0018",
+"field_name": "Khasra 811",
+"khasra_no": 811,
+"area_acres": 1.38,
+"soil_type": "Clay",
+"soil_ph": 7.12,
+"soil_ec": 1.26,
+"ownership_type": "Leased",
+"irrigation_method": "Sprinkler",
+"village": "Iqbalpur",
+"latitude": 30.020416,
+"longitude": 78.157404,
+"_baseline": {
+"moisture": 26.9,
+"temp": 30.3,
+"humidity": 70.27
+}
+},
+{
+"field_id": "FLD-0044",
+"farmer_id": "FRM-0018",
+"field_name": "Khasra 9234",
+"khasra_no": 9234,
+"area_acres": 2.04,
+"soil_type": "Sandy",
+"soil_ph": 7.4,
+"soil_ec": 1.32,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Iqbalpur",
+"latitude": 30.001902,
+"longitude": 78.143124,
+"_baseline": {
+"moisture": 27.04,
+"temp": 29.2,
+"humidity": 69.6
+}
+},
+{
+"field_id": "FLD-0045",
+"farmer_id": "FRM-0019",
+"field_name": "Khasra 9802",
+"khasra_no": 9802,
+"area_acres": 2.63,
+"soil_type": "Alluvial",
+"soil_ph": 7.29,
+"soil_ec": 1.44,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 30.002458,
+"longitude": 78.161692,
+"_baseline": {
+"moisture": 24.99,
+"temp": 27.59,
+"humidity": 68.09
+}
+},
+{
+"field_id": "FLD-0046",
+"farmer_id": "FRM-0019",
+"field_name": "Khasra 4129",
+"khasra_no": 4129,
+"area_acres": 2.93,
+"soil_type": "Loamy",
+"soil_ph": 7.59,
+"soil_ec": 1.43,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 30.019485,
+"longitude": 78.14262,
+"_baseline": {
+"moisture": 26.25,
+"temp": 27.36,
+"humidity": 72.11
+}
+},
+{
+"field_id": "FLD-0047",
+"farmer_id": "FRM-0019",
+"field_name": "Khasra 3555",
+"khasra_no": 3555,
+"area_acres": 3.42,
+"soil_type": "Alluvial",
+"soil_ph": 7.54,
+"soil_ec": 1.34,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Iqbalpur",
+"latitude": 29.999638,
+"longitude": 78.154364,
+"_baseline": {
+"moisture": 27.33,
+"temp": 30.82,
+"humidity": 70.35
+}
+},
+{
+"field_id": "FLD-0048",
+"farmer_id": "FRM-0020",
+"field_name": "Khasra 676",
+"khasra_no": 676,
+"area_acres": 5.63,
+"soil_type": "Clay",
+"soil_ph": 7.25,
+"soil_ec": 1.3,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 29.975773,
+"longitude": 78.134087,
+"_baseline": {
+"moisture": 27.56,
+"temp": 27.43,
+"humidity": 68.22
+}
+},
+{
+"field_id": "FLD-0049",
+"farmer_id": "FRM-0020",
+"field_name": "Khasra 8144",
+"khasra_no": 8144,
+"area_acres": 1.63,
+"soil_type": "Alluvial",
+"soil_ph": 7.01,
+"soil_ec": 1.3,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Iqbalpur",
+"latitude": 29.997302,
+"longitude": 78.148065,
+"_baseline": {
+"moisture": 23.37,
+"temp": 28.29,
+"humidity": 68.23
+}
+},
+{
+"field_id": "FLD-0050",
+"farmer_id": "FRM-0021",
+"field_name": "Khasra 3881",
+"khasra_no": 3881,
+"area_acres": 1.31,
+"soil_type": "Sandy",
+"soil_ph": 7.31,
+"soil_ec": 1.28,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Jwalapur",
+"latitude": 29.991754,
+"longitude": 78.166038,
+"_baseline": {
+"moisture": 23.91,
+"temp": 27.18,
+"humidity": 65.72
+}
+},
+{
+"field_id": "FLD-0051",
+"farmer_id": "FRM-0021",
+"field_name": "Khasra 5046",
+"khasra_no": 5046,
+"area_acres": 2.82,
+"soil_type": "Alluvial",
+"soil_ph": 7.3,
+"soil_ec": 1.1,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Jwalapur",
+"latitude": 29.99094,
+"longitude": 78.195498,
+"_baseline": {
+"moisture": 25.06,
+"temp": 25.46,
+"humidity": 69.6
+}
+},
+{
+"field_id": "FLD-0052",
+"farmer_id": "FRM-0021",
+"field_name": "Khasra 9172",
+"khasra_no": 9172,
+"area_acres": 2.37,
+"soil_type": "Sandy",
+"soil_ph": 7.15,
+"soil_ec": 1.4,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Jwalapur",
+"latitude": 30.01792,
+"longitude": 78.136741,
+"_baseline": {
+"moisture": 23.47,
+"temp": 28.36,
+"humidity": 69.14
+}
+},
+{
+"field_id": "FLD-0053",
+"farmer_id": "FRM-0022",
+"field_name": "Khasra 8680",
+"khasra_no": 8680,
+"area_acres": 2.32,
+"soil_type": "Alluvial",
+"soil_ph": 7.28,
+"soil_ec": 1.27,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Jwalapur",
+"latitude": 29.986796,
+"longitude": 78.14754,
+"_baseline": {
+"moisture": 25.8,
+"temp": 30.72,
+"humidity": 69.78
+}
+},
+{
+"field_id": "FLD-0054",
+"farmer_id": "FRM-0022",
+"field_name": "Khasra 594",
+"khasra_no": 594,
+"area_acres": 1.21,
+"soil_type": "Loamy",
+"soil_ph": 7.17,
+"soil_ec": 1.43,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Jwalapur",
+"latitude": 30.010454,
+"longitude": 78.156437,
+"_baseline": {
+"moisture": 20.44,
+"temp": 26.34,
+"humidity": 74.27
+}
+},
+{
+"field_id": "FLD-0055",
+"farmer_id": "FRM-0022",
+"field_name": "Khasra 8101",
+"khasra_no": 8101,
+"area_acres": 3.36,
+"soil_type": "Loamy",
+"soil_ph": 7.45,
+"soil_ec": 1.21,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Jwalapur",
+"latitude": 30.02881,
+"longitude": 78.156939,
+"_baseline": {
+"moisture": 24.53,
+"temp": 27.51,
+"humidity": 68.28
+}
+},
+{
+"field_id": "FLD-0056",
+"farmer_id": "FRM-0023",
+"field_name": "Khasra 6047",
+"khasra_no": 6047,
+"area_acres": 3.33,
+"soil_type": "Loamy",
+"soil_ph": 7.23,
+"soil_ec": 1.25,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Jwalapur",
+"latitude": 30.011069,
+"longitude": 78.144776,
+"_baseline": {
+"moisture": 21.99,
+"temp": 28.86,
+"humidity": 74.92
+}
+},
+{
+"field_id": "FLD-0057",
+"farmer_id": "FRM-0023",
+"field_name": "Khasra 3761",
+"khasra_no": 3761,
+"area_acres": 2.08,
+"soil_type": "Clay",
+"soil_ph": 7.22,
+"soil_ec": 1.51,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Jwalapur",
+"latitude": 30.003408,
+"longitude": 78.139616,
+"_baseline": {
+"moisture": 25.4,
+"temp": 28.54,
+"humidity": 69.37
+}
+},
+{
+"field_id": "FLD-0058",
+"farmer_id": "FRM-0023",
+"field_name": "Khasra 1420",
+"khasra_no": 1420,
+"area_acres": 9.0,
+"soil_type": "Clay",
+"soil_ph": 7.08,
+"soil_ec": 1.52,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Jwalapur",
+"latitude": 29.992063,
+"longitude": 78.151262,
+"_baseline": {
+"moisture": 24.57,
+"temp": 29.05,
+"humidity": 69.79
+}
+},
+{
+"field_id": "FLD-0059",
+"farmer_id": "FRM-0024",
+"field_name": "Khasra 7711",
+"khasra_no": 7711,
+"area_acres": 1.33,
+"soil_type": "Sandy",
+"soil_ph": 7.34,
+"soil_ec": 1.18,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Jwalapur",
+"latitude": 29.980078,
+"longitude": 78.166438,
+"_baseline": {
+"moisture": 23.32,
+"temp": 30.15,
+"humidity": 69.9
+}
+},
+{
+"field_id": "FLD-0060",
+"farmer_id": "FRM-0024",
+"field_name": "Khasra 8509",
+"khasra_no": 8509,
+"area_acres": 4.0,
+"soil_type": "Clay",
+"soil_ph": 6.97,
+"soil_ec": 1.35,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Jwalapur",
+"latitude": 30.064375,
+"longitude": 78.166331,
+"_baseline": {
+"moisture": 23.51,
+"temp": 28.24,
+"humidity": 75.16
+}
+},
+{
+"field_id": "FLD-0061",
+"farmer_id": "FRM-0025",
+"field_name": "Khasra 4389",
+"khasra_no": 4389,
+"area_acres": 1.8,
+"soil_type": "Alluvial",
+"soil_ph": 7.2,
+"soil_ec": 1.24,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Jwalapur",
+"latitude": 30.032722,
+"longitude": 78.125749,
+"_baseline": {
+"moisture": 24.64,
+"temp": 29.43,
+"humidity": 68.58
+}
+},
+{
+"field_id": "FLD-0062",
+"farmer_id": "FRM-0025",
+"field_name": "Khasra 3675",
+"khasra_no": 3675,
+"area_acres": 1.57,
+"soil_type": "Sandy",
+"soil_ph": 7.47,
+"soil_ec": 1.24,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Jwalapur",
+"latitude": 30.008059,
+"longitude": 78.13361,
+"_baseline": {
+"moisture": 27.6,
+"temp": 27.63,
+"humidity": 67.26
+}
+},
+{
+"field_id": "FLD-0063",
+"farmer_id": "FRM-0025",
+"field_name": "Khasra 265",
+"khasra_no": 265,
+"area_acres": 1.34,
+"soil_type": "Clay",
+"soil_ph": 7.39,
+"soil_ec": 1.45,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Jwalapur",
+"latitude": 30.008181,
+"longitude": 78.13176,
+"_baseline": {
+"moisture": 28.98,
+"temp": 28.73,
+"humidity": 71.57
+}
+},
+{
+"field_id": "FLD-0064",
+"farmer_id": "FRM-0026",
+"field_name": "Khasra 5883",
+"khasra_no": 5883,
+"area_acres": 4.02,
+"soil_type": "Loamy",
+"soil_ph": 7.33,
+"soil_ec": 1.3,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Jwalapur",
+"latitude": 29.995819,
+"longitude": 78.163862,
+"_baseline": {
+"moisture": 24.16,
+"temp": 27.84,
+"humidity": 72.45
+}
+},
+{
+"field_id": "FLD-0065",
+"farmer_id": "FRM-0026",
+"field_name": "Khasra 6858",
+"khasra_no": 6858,
+"area_acres": 1.77,
+"soil_type": "Alluvial",
+"soil_ph": 7.12,
+"soil_ec": 1.16,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Jwalapur",
+"latitude": 30.019259,
+"longitude": 78.167129,
+"_baseline": {
+"moisture": 28.28,
+"temp": 21.64,
+"humidity": 74.65
+}
+},
+{
+"field_id": "FLD-0066",
+"farmer_id": "FRM-0027",
+"field_name": "Khasra 5502",
+"khasra_no": 5502,
+"area_acres": 1.89,
+"soil_type": "Clay",
+"soil_ph": 7.27,
+"soil_ec": 1.42,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 29.999688,
+"longitude": 78.142749,
+"_baseline": {
+"moisture": 27.27,
+"temp": 27.24,
+"humidity": 71.17
+}
+},
+{
+"field_id": "FLD-0067",
+"farmer_id": "FRM-0027",
+"field_name": "Khasra 2195",
+"khasra_no": 2195,
+"area_acres": 1.96,
+"soil_type": "Alluvial",
+"soil_ph": 7.11,
+"soil_ec": 1.39,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Landaura",
+"latitude": 29.980001,
+"longitude": 78.165981,
+"_baseline": {
+"moisture": 23.1,
+"temp": 24.99,
+"humidity": 68.88
+}
+},
+{
+"field_id": "FLD-0068",
+"farmer_id": "FRM-0028",
+"field_name": "Khasra 2323",
+"khasra_no": 2323,
+"area_acres": 2.98,
+"soil_type": "Sandy",
+"soil_ph": 7.17,
+"soil_ec": 1.33,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 30.038306,
+"longitude": 78.141226,
+"_baseline": {
+"moisture": 26.04,
+"temp": 26.26,
+"humidity": 68.69
+}
+},
+{
+"field_id": "FLD-0069",
+"farmer_id": "FRM-0028",
+"field_name": "Khasra 9620",
+"khasra_no": 9620,
+"area_acres": 4.33,
+"soil_type": "Alluvial",
+"soil_ph": 7.41,
+"soil_ec": 1.46,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Landaura",
+"latitude": 29.982834,
+"longitude": 78.159428,
+"_baseline": {
+"moisture": 21.45,
+"temp": 30.59,
+"humidity": 69.36
+}
+},
+{
+"field_id": "FLD-0070",
+"farmer_id": "FRM-0028",
+"field_name": "Khasra 8858",
+"khasra_no": 8858,
+"area_acres": 2.87,
+"soil_type": "Alluvial",
+"soil_ph": 7.37,
+"soil_ec": 1.18,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Landaura",
+"latitude": 29.982575,
+"longitude": 78.150193,
+"_baseline": {
+"moisture": 27.3,
+"temp": 28.97,
+"humidity": 72.17
+}
+},
+{
+"field_id": "FLD-0071",
+"farmer_id": "FRM-0029",
+"field_name": "Khasra 6560",
+"khasra_no": 6560,
+"area_acres": 4.57,
+"soil_type": "Alluvial",
+"soil_ph": 7.31,
+"soil_ec": 1.19,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Landaura",
+"latitude": 30.014536,
+"longitude": 78.140178,
+"_baseline": {
+"moisture": 29.11,
+"temp": 27.15,
+"humidity": 70.85
+}
+},
+{
+"field_id": "FLD-0072",
+"farmer_id": "FRM-0029",
+"field_name": "Khasra 7892",
+"khasra_no": 7892,
+"area_acres": 4.81,
+"soil_type": "Clay",
+"soil_ph": 7.03,
+"soil_ec": 1.51,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 29.989301,
+"longitude": 78.148016,
+"_baseline": {
+"moisture": 24.64,
+"temp": 29.84,
+"humidity": 66.86
+}
+},
+{
+"field_id": "FLD-0073",
+"farmer_id": "FRM-0029",
+"field_name": "Khasra 5476",
+"khasra_no": 5476,
+"area_acres": 1.98,
+"soil_type": "Alluvial",
+"soil_ph": 7.49,
+"soil_ec": 1.42,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 30.003161,
+"longitude": 78.146,
+"_baseline": {
+"moisture": 29.72,
+"temp": 28.14,
+"humidity": 73.05
+}
+},
+{
+"field_id": "FLD-0074",
+"farmer_id": "FRM-0030",
+"field_name": "Khasra 473",
+"khasra_no": 473,
+"area_acres": 2.89,
+"soil_type": "Sandy",
+"soil_ph": 7.28,
+"soil_ec": 1.35,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 30.049963,
+"longitude": 78.170552,
+"_baseline": {
+"moisture": 25.14,
+"temp": 26.67,
+"humidity": 69.25
+}
+},
+{
+"field_id": "FLD-0075",
+"farmer_id": "FRM-0030",
+"field_name": "Khasra 7251",
+"khasra_no": 7251,
+"area_acres": 3.85,
+"soil_type": "Sandy",
+"soil_ph": 7.4,
+"soil_ec": 1.15,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Landaura",
+"latitude": 30.000765,
+"longitude": 78.149897,
+"_baseline": {
+"moisture": 25.04,
+"temp": 27.47,
+"humidity": 72.34
+}
+},
+{
+"field_id": "FLD-0076",
+"farmer_id": "FRM-0030",
+"field_name": "Khasra 3070",
+"khasra_no": 3070,
+"area_acres": 3.59,
+"soil_type": "Sandy",
+"soil_ph": 7.18,
+"soil_ec": 1.44,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Landaura",
+"latitude": 30.028162,
+"longitude": 78.148972,
+"_baseline": {
+"moisture": 27.44,
+"temp": 27.94,
+"humidity": 73.17
+}
+},
+{
+"field_id": "FLD-0077",
+"farmer_id": "FRM-0031",
+"field_name": "Khasra 3427",
+"khasra_no": 3427,
+"area_acres": 2.63,
+"soil_type": "Loamy",
+"soil_ph": 7.38,
+"soil_ec": 1.62,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Landaura",
+"latitude": 29.99737,
+"longitude": 78.133688,
+"_baseline": {
+"moisture": 26.5,
+"temp": 28.47,
+"humidity": 69.4
+}
+},
+{
+"field_id": "FLD-0078",
+"farmer_id": "FRM-0031",
+"field_name": "Khasra 6417",
+"khasra_no": 6417,
+"area_acres": 5.45,
+"soil_type": "Loamy",
+"soil_ph": 7.06,
+"soil_ec": 1.33,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Landaura",
+"latitude": 30.036098,
+"longitude": 78.145507,
+"_baseline": {
+"moisture": 26.04,
+"temp": 29.22,
+"humidity": 67.17
+}
+},
+{
+"field_id": "FLD-0079",
+"farmer_id": "FRM-0031",
+"field_name": "Khasra 5175",
+"khasra_no": 5175,
+"area_acres": 2.22,
+"soil_type": "Clay",
+"soil_ph": 7.21,
+"soil_ec": 1.03,
+"ownership_type": "Leased",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 30.003469,
+"longitude": 78.11737,
+"_baseline": {
+"moisture": 20.73,
+"temp": 27.51,
+"humidity": 66.62
+}
+},
+{
+"field_id": "FLD-0080",
+"farmer_id": "FRM-0032",
+"field_name": "Khasra 7769",
+"khasra_no": 7769,
+"area_acres": 2.24,
+"soil_type": "Clay",
+"soil_ph": 7.2,
+"soil_ec": 1.47,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Landaura",
+"latitude": 30.00663,
+"longitude": 78.146626,
+"_baseline": {
+"moisture": 24.04,
+"temp": 28.87,
+"humidity": 69.29
+}
+},
+{
+"field_id": "FLD-0081",
+"farmer_id": "FRM-0032",
+"field_name": "Khasra 3561",
+"khasra_no": 3561,
+"area_acres": 3.0,
+"soil_type": "Loamy",
+"soil_ph": 7.22,
+"soil_ec": 1.57,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Landaura",
+"latitude": 30.058541,
+"longitude": 78.132914,
+"_baseline": {
+"moisture": 27.21,
+"temp": 27.84,
+"humidity": 71.81
+}
+},
+{
+"field_id": "FLD-0082",
+"farmer_id": "FRM-0032",
+"field_name": "Khasra 1923",
+"khasra_no": 1923,
+"area_acres": 2.31,
+"soil_type": "Loamy",
+"soil_ph": 7.19,
+"soil_ec": 1.09,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Landaura",
+"latitude": 30.044189,
+"longitude": 78.148148,
+"_baseline": {
+"moisture": 23.08,
+"temp": 29.12,
+"humidity": 71.35
+}
+},
+{
+"field_id": "FLD-0083",
+"farmer_id": "FRM-0033",
+"field_name": "Khasra 8232",
+"khasra_no": 8232,
+"area_acres": 1.52,
+"soil_type": "Sandy",
+"soil_ph": 7.4,
+"soil_ec": 1.33,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Manglore",
+"latitude": 30.000639,
+"longitude": 78.16547,
+"_baseline": {
+"moisture": 26.75,
+"temp": 28.62,
+"humidity": 69.66
+}
+},
+{
+"field_id": "FLD-0084",
+"farmer_id": "FRM-0033",
+"field_name": "Khasra 4692",
+"khasra_no": 4692,
+"area_acres": 4.33,
+"soil_type": "Loamy",
+"soil_ph": 6.91,
+"soil_ec": 1.46,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 29.968728,
+"longitude": 78.134495,
+"_baseline": {
+"moisture": 24.88,
+"temp": 28.56,
+"humidity": 70.6
+}
+},
+{
+"field_id": "FLD-0085",
+"farmer_id": "FRM-0033",
+"field_name": "Khasra 4842",
+"khasra_no": 4842,
+"area_acres": 2.56,
+"soil_type": "Alluvial",
+"soil_ph": 7.26,
+"soil_ec": 1.33,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 29.972644,
+"longitude": 78.158183,
+"_baseline": {
+"moisture": 24.98,
+"temp": 27.31,
+"humidity": 67.48
+}
+},
+{
+"field_id": "FLD-0086",
+"farmer_id": "FRM-0034",
+"field_name": "Khasra 3622",
+"khasra_no": 3622,
+"area_acres": 4.1,
+"soil_type": "Loamy",
+"soil_ph": 6.89,
+"soil_ec": 1.2,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 29.993526,
+"longitude": 78.14825,
+"_baseline": {
+"moisture": 24.85,
+"temp": 26.51,
+"humidity": 77.18
+}
+},
+{
+"field_id": "FLD-0087",
+"farmer_id": "FRM-0034",
+"field_name": "Khasra 3859",
+"khasra_no": 3859,
+"area_acres": 4.59,
+"soil_type": "Sandy",
+"soil_ph": 7.33,
+"soil_ec": 1.43,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Manglore",
+"latitude": 30.005734,
+"longitude": 78.147196,
+"_baseline": {
+"moisture": 27.0,
+"temp": 24.72,
+"humidity": 71.49
+}
+},
+{
+"field_id": "FLD-0088",
+"farmer_id": "FRM-0034",
+"field_name": "Khasra 9605",
+"khasra_no": 9605,
+"area_acres": 1.38,
+"soil_type": "Alluvial",
+"soil_ph": 7.53,
+"soil_ec": 1.32,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 29.998757,
+"longitude": 78.178425,
+"_baseline": {
+"moisture": 25.49,
+"temp": 29.59,
+"humidity": 66.55
+}
+},
+{
+"field_id": "FLD-0089",
+"farmer_id": "FRM-0035",
+"field_name": "Khasra 6632",
+"khasra_no": 6632,
+"area_acres": 3.36,
+"soil_type": "Sandy",
+"soil_ph": 7.11,
+"soil_ec": 1.24,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 30.000047,
+"longitude": 78.146937,
+"_baseline": {
+"moisture": 25.92,
+"temp": 24.48,
+"humidity": 68.83
+}
+},
+{
+"field_id": "FLD-0090",
+"farmer_id": "FRM-0035",
+"field_name": "Khasra 4506",
+"khasra_no": 4506,
+"area_acres": 2.0,
+"soil_type": "Clay",
+"soil_ph": 7.15,
+"soil_ec": 1.56,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 29.963852,
+"longitude": 78.139805,
+"_baseline": {
+"moisture": 22.84,
+"temp": 30.91,
+"humidity": 68.39
+}
+},
+{
+"field_id": "FLD-0091",
+"farmer_id": "FRM-0035",
+"field_name": "Khasra 6077",
+"khasra_no": 6077,
+"area_acres": 2.91,
+"soil_type": "Loamy",
+"soil_ph": 7.45,
+"soil_ec": 1.4,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Manglore",
+"latitude": 29.996651,
+"longitude": 78.153397,
+"_baseline": {
+"moisture": 23.24,
+"temp": 28.94,
+"humidity": 73.27
+}
+},
+{
+"field_id": "FLD-0092",
+"farmer_id": "FRM-0036",
+"field_name": "Khasra 3983",
+"khasra_no": 3983,
+"area_acres": 3.49,
+"soil_type": "Clay",
+"soil_ph": 6.93,
+"soil_ec": 1.16,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Manglore",
+"latitude": 30.024929,
+"longitude": 78.151572,
+"_baseline": {
+"moisture": 25.75,
+"temp": 27.56,
+"humidity": 68.57
+}
+},
+{
+"field_id": "FLD-0093",
+"farmer_id": "FRM-0036",
+"field_name": "Khasra 2150",
+"khasra_no": 2150,
+"area_acres": 1.79,
+"soil_type": "Sandy",
+"soil_ph": 7.02,
+"soil_ec": 1.38,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Manglore",
+"latitude": 30.032958,
+"longitude": 78.156408,
+"_baseline": {
+"moisture": 24.56,
+"temp": 26.21,
+"humidity": 68.22
+}
+},
+{
+"field_id": "FLD-0094",
+"farmer_id": "FRM-0036",
+"field_name": "Khasra 5051",
+"khasra_no": 5051,
+"area_acres": 1.58,
+"soil_type": "Alluvial",
+"soil_ph": 7.52,
+"soil_ec": 1.11,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 30.022814,
+"longitude": 78.17316,
+"_baseline": {
+"moisture": 26.26,
+"temp": 28.26,
+"humidity": 69.5
+}
+},
+{
+"field_id": "FLD-0095",
+"farmer_id": "FRM-0037",
+"field_name": "Khasra 8360",
+"khasra_no": 8360,
+"area_acres": 2.57,
+"soil_type": "Alluvial",
+"soil_ph": 7.39,
+"soil_ec": 1.94,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 30.016721,
+"longitude": 78.154879,
+"_baseline": {
+"moisture": 23.6,
+"temp": 24.86,
+"humidity": 74.4
+}
+},
+{
+"field_id": "FLD-0096",
+"farmer_id": "FRM-0037",
+"field_name": "Khasra 5021",
+"khasra_no": 5021,
+"area_acres": 2.19,
+"soil_type": "Clay",
+"soil_ph": 7.22,
+"soil_ec": 1.45,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Manglore",
+"latitude": 29.991638,
+"longitude": 78.141021,
+"_baseline": {
+"moisture": 24.17,
+"temp": 30.56,
+"humidity": 73.37
+}
+},
+{
+"field_id": "FLD-0097",
+"farmer_id": "FRM-0037",
+"field_name": "Khasra 4798",
+"khasra_no": 4798,
+"area_acres": 1.98,
+"soil_type": "Alluvial",
+"soil_ph": 7.51,
+"soil_ec": 1.24,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Manglore",
+"latitude": 29.98261,
+"longitude": 78.140605,
+"_baseline": {
+"moisture": 26.39,
+"temp": 29.57,
+"humidity": 70.75
+}
+},
+{
+"field_id": "FLD-0098",
+"farmer_id": "FRM-0038",
+"field_name": "Khasra 8744",
+"khasra_no": 8744,
+"area_acres": 3.02,
+"soil_type": "Clay",
+"soil_ph": 7.15,
+"soil_ec": 1.29,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 29.972169,
+"longitude": 78.145409,
+"_baseline": {
+"moisture": 25.59,
+"temp": 27.65,
+"humidity": 71.01
+}
+},
+{
+"field_id": "FLD-0099",
+"farmer_id": "FRM-0038",
+"field_name": "Khasra 2450",
+"khasra_no": 2450,
+"area_acres": 2.37,
+"soil_type": "Loamy",
+"soil_ph": 7.18,
+"soil_ec": 1.33,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Manglore",
+"latitude": 30.032202,
+"longitude": 78.15126,
+"_baseline": {
+"moisture": 26.56,
+"temp": 26.81,
+"humidity": 70.01
+}
+},
+{
+"field_id": "FLD-0100",
+"farmer_id": "FRM-0039",
+"field_name": "Khasra 8662",
+"khasra_no": 8662,
+"area_acres": 3.26,
+"soil_type": "Alluvial",
+"soil_ph": 7.13,
+"soil_ec": 1.31,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Narsan",
+"latitude": 29.985929,
+"longitude": 78.14061,
+"_baseline": {
+"moisture": 26.0,
+"temp": 26.93,
+"humidity": 73.03
+}
+},
+{
+"field_id": "FLD-0101",
+"farmer_id": "FRM-0039",
+"field_name": "Khasra 4500",
+"khasra_no": 4500,
+"area_acres": 3.52,
+"soil_type": "Clay",
+"soil_ph": 7.27,
+"soil_ec": 1.52,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 29.985776,
+"longitude": 78.132908,
+"_baseline": {
+"moisture": 23.52,
+"temp": 27.03,
+"humidity": 70.85
+}
+},
+{
+"field_id": "FLD-0102",
+"farmer_id": "FRM-0039",
+"field_name": "Khasra 298",
+"khasra_no": 298,
+"area_acres": 1.82,
+"soil_type": "Loamy",
+"soil_ph": 7.26,
+"soil_ec": 1.22,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Narsan",
+"latitude": 29.995044,
+"longitude": 78.139712,
+"_baseline": {
+"moisture": 25.58,
+"temp": 26.14,
+"humidity": 76.2
+}
+},
+{
+"field_id": "FLD-0103",
+"farmer_id": "FRM-0040",
+"field_name": "Khasra 4019",
+"khasra_no": 4019,
+"area_acres": 1.97,
+"soil_type": "Clay",
+"soil_ph": 7.21,
+"soil_ec": 1.17,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Narsan",
+"latitude": 30.022423,
+"longitude": 78.170778,
+"_baseline": {
+"moisture": 25.68,
+"temp": 27.41,
+"humidity": 67.63
+}
+},
+{
+"field_id": "FLD-0104",
+"farmer_id": "FRM-0040",
+"field_name": "Khasra 6469",
+"khasra_no": 6469,
+"area_acres": 2.98,
+"soil_type": "Sandy",
+"soil_ph": 7.03,
+"soil_ec": 1.01,
+"ownership_type": "Leased",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 29.983496,
+"longitude": 78.169532,
+"_baseline": {
+"moisture": 25.08,
+"temp": 27.94,
+"humidity": 70.12
+}
+},
+{
+"field_id": "FLD-0105",
+"farmer_id": "FRM-0040",
+"field_name": "Khasra 8745",
+"khasra_no": 8745,
+"area_acres": 2.87,
+"soil_type": "Alluvial",
+"soil_ph": 7.14,
+"soil_ec": 1.11,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Narsan",
+"latitude": 29.993066,
+"longitude": 78.168359,
+"_baseline": {
+"moisture": 19.76,
+"temp": 27.81,
+"humidity": 74.71
+}
+},
+{
+"field_id": "FLD-0106",
+"farmer_id": "FRM-0041",
+"field_name": "Khasra 1311",
+"khasra_no": 1311,
+"area_acres": 2.78,
+"soil_type": "Clay",
+"soil_ph": 7.16,
+"soil_ec": 1.5,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 30.000332,
+"longitude": 78.15092,
+"_baseline": {
+"moisture": 23.86,
+"temp": 26.63,
+"humidity": 67.55
+}
+},
+{
+"field_id": "FLD-0107",
+"farmer_id": "FRM-0041",
+"field_name": "Khasra 5808",
+"khasra_no": 5808,
+"area_acres": 5.24,
+"soil_type": "Clay",
+"soil_ph": 7.32,
+"soil_ec": 1.4,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 29.95645,
+"longitude": 78.12597,
+"_baseline": {
+"moisture": 22.6,
+"temp": 27.54,
+"humidity": 71.24
+}
+},
+{
+"field_id": "FLD-0108",
+"farmer_id": "FRM-0041",
+"field_name": "Khasra 6063",
+"khasra_no": 6063,
+"area_acres": 5.42,
+"soil_type": "Alluvial",
+"soil_ph": 7.31,
+"soil_ec": 1.42,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Narsan",
+"latitude": 29.992444,
+"longitude": 78.131436,
+"_baseline": {
+"moisture": 25.68,
+"temp": 28.99,
+"humidity": 70.95
+}
+},
+{
+"field_id": "FLD-0109",
+"farmer_id": "FRM-0042",
+"field_name": "Khasra 4239",
+"khasra_no": 4239,
+"area_acres": 1.13,
+"soil_type": "Alluvial",
+"soil_ph": 7.23,
+"soil_ec": 1.25,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Narsan",
+"latitude": 30.010001,
+"longitude": 78.156687,
+"_baseline": {
+"moisture": 23.8,
+"temp": 30.61,
+"humidity": 70.88
+}
+},
+{
+"field_id": "FLD-0110",
+"farmer_id": "FRM-0042",
+"field_name": "Khasra 3040",
+"khasra_no": 3040,
+"area_acres": 2.6,
+"soil_type": "Loamy",
+"soil_ph": 7.43,
+"soil_ec": 1.19,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 30.031034,
+"longitude": 78.12505,
+"_baseline": {
+"moisture": 26.81,
+"temp": 28.63,
+"humidity": 71.9
+}
+},
+{
+"field_id": "FLD-0111",
+"farmer_id": "FRM-0043",
+"field_name": "Khasra 8301",
+"khasra_no": 8301,
+"area_acres": 2.27,
+"soil_type": "Sandy",
+"soil_ph": 7.26,
+"soil_ec": 1.27,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Narsan",
+"latitude": 30.011657,
+"longitude": 78.161497,
+"_baseline": {
+"moisture": 26.17,
+"temp": 30.2,
+"humidity": 71.63
+}
+},
+{
+"field_id": "FLD-0112",
+"farmer_id": "FRM-0043",
+"field_name": "Khasra 3080",
+"khasra_no": 3080,
+"area_acres": 1.56,
+"soil_type": "Loamy",
+"soil_ph": 7.15,
+"soil_ec": 0.94,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 29.988809,
+"longitude": 78.166402,
+"_baseline": {
+"moisture": 25.64,
+"temp": 30.43,
+"humidity": 71.94
+}
+},
+{
+"field_id": "FLD-0113",
+"farmer_id": "FRM-0044",
+"field_name": "Khasra 2247",
+"khasra_no": 2247,
+"area_acres": 1.15,
+"soil_type": "Sandy",
+"soil_ph": 7.02,
+"soil_ec": 1.26,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Narsan",
+"latitude": 30.002296,
+"longitude": 78.191052,
+"_baseline": {
+"moisture": 23.92,
+"temp": 30.51,
+"humidity": 66.69
+}
+},
+{
+"field_id": "FLD-0114",
+"farmer_id": "FRM-0044",
+"field_name": "Khasra 204",
+"khasra_no": 204,
+"area_acres": 0.85,
+"soil_type": "Sandy",
+"soil_ph": 7.48,
+"soil_ec": 0.95,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Narsan",
+"latitude": 30.01483,
+"longitude": 78.139924,
+"_baseline": {
+"moisture": 27.66,
+"temp": 27.55,
+"humidity": 67.54
+}
+},
+{
+"field_id": "FLD-0115",
+"farmer_id": "FRM-0044",
+"field_name": "Khasra 1577",
+"khasra_no": 1577,
+"area_acres": 2.18,
+"soil_type": "Loamy",
+"soil_ph": 6.85,
+"soil_ec": 1.66,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Narsan",
+"latitude": 29.999849,
+"longitude": 78.192137,
+"_baseline": {
+"moisture": 26.92,
+"temp": 30.8,
+"humidity": 71.23
+}
+},
+{
+"field_id": "FLD-0116",
+"farmer_id": "FRM-0045",
+"field_name": "Khasra 7134",
+"khasra_no": 7134,
+"area_acres": 1.99,
+"soil_type": "Loamy",
+"soil_ph": 7.21,
+"soil_ec": 1.22,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Piran Kaliyar",
+"latitude": 30.021852,
+"longitude": 78.174666,
+"_baseline": {
+"moisture": 24.64,
+"temp": 28.39,
+"humidity": 68.75
+}
+},
+{
+"field_id": "FLD-0117",
+"farmer_id": "FRM-0045",
+"field_name": "Khasra 5928",
+"khasra_no": 5928,
+"area_acres": 2.78,
+"soil_type": "Clay",
+"soil_ph": 7.05,
+"soil_ec": 1.26,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Piran Kaliyar",
+"latitude": 30.007459,
+"longitude": 78.146597,
+"_baseline": {
+"moisture": 24.38,
+"temp": 26.79,
+"humidity": 71.29
+}
+},
+{
+"field_id": "FLD-0118",
+"farmer_id": "FRM-0045",
+"field_name": "Khasra 3686",
+"khasra_no": 3686,
+"area_acres": 2.14,
+"soil_type": "Alluvial",
+"soil_ph": 7.29,
+"soil_ec": 1.27,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Piran Kaliyar",
+"latitude": 29.959292,
+"longitude": 78.169759,
+"_baseline": {
+"moisture": 26.05,
+"temp": 26.7,
+"humidity": 67.65
+}
+},
+{
+"field_id": "FLD-0119",
+"farmer_id": "FRM-0046",
+"field_name": "Khasra 8951",
+"khasra_no": 8951,
+"area_acres": 3.6,
+"soil_type": "Sandy",
+"soil_ph": 7.37,
+"soil_ec": 1.42,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Piran Kaliyar",
+"latitude": 30.019303,
+"longitude": 78.169482,
+"_baseline": {
+"moisture": 25.33,
+"temp": 26.87,
+"humidity": 71.14
+}
+},
+{
+"field_id": "FLD-0120",
+"farmer_id": "FRM-0046",
+"field_name": "Khasra 2330",
+"khasra_no": 2330,
+"area_acres": 4.31,
+"soil_type": "Clay",
+"soil_ph": 7.44,
+"soil_ec": 1.35,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Piran Kaliyar",
+"latitude": 30.03386,
+"longitude": 78.125687,
+"_baseline": {
+"moisture": 25.96,
+"temp": 26.16,
+"humidity": 67.74
+}
+},
+{
+"field_id": "FLD-0121",
+"farmer_id": "FRM-0047",
+"field_name": "Khasra 9936",
+"khasra_no": 9936,
+"area_acres": 1.74,
+"soil_type": "Alluvial",
+"soil_ph": 7.06,
+"soil_ec": 1.15,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Piran Kaliyar",
+"latitude": 30.013793,
+"longitude": 78.127894,
+"_baseline": {
+"moisture": 29.54,
+"temp": 25.82,
+"humidity": 69.78
+}
+},
+{
+"field_id": "FLD-0122",
+"farmer_id": "FRM-0047",
+"field_name": "Khasra 4848",
+"khasra_no": 4848,
+"area_acres": 1.87,
+"soil_type": "Alluvial",
+"soil_ph": 7.38,
+"soil_ec": 1.26,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Piran Kaliyar",
+"latitude": 30.000279,
+"longitude": 78.139359,
+"_baseline": {
+"moisture": 24.14,
+"temp": 26.59,
+"humidity": 69.3
+}
+},
+{
+"field_id": "FLD-0123",
+"farmer_id": "FRM-0048",
+"field_name": "Khasra 9911",
+"khasra_no": 9911,
+"area_acres": 4.71,
+"soil_type": "Loamy",
+"soil_ph": 7.28,
+"soil_ec": 1.46,
+"ownership_type": "Owned",
+"irrigation_method": "Drip",
+"village": "Piran Kaliyar",
+"latitude": 29.98562,
+"longitude": 78.120709,
+"_baseline": {
+"moisture": 29.93,
+"temp": 27.33,
+"humidity": 69.42
+}
+},
+{
+"field_id": "FLD-0124",
+"farmer_id": "FRM-0048",
+"field_name": "Khasra 1479",
+"khasra_no": 1479,
+"area_acres": 1.61,
+"soil_type": "Loamy",
+"soil_ph": 7.35,
+"soil_ec": 1.4,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Piran Kaliyar",
+"latitude": 30.015186,
+"longitude": 78.152377,
+"_baseline": {
+"moisture": 25.7,
+"temp": 29.2,
+"humidity": 66.95
+}
+},
+{
+"field_id": "FLD-0125",
+"farmer_id": "FRM-0048",
+"field_name": "Khasra 9719",
+"khasra_no": 9719,
+"area_acres": 5.71,
+"soil_type": "Loamy",
+"soil_ph": 7.23,
+"soil_ec": 1.27,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Piran Kaliyar",
+"latitude": 29.948076,
+"longitude": 78.123811,
+"_baseline": {
+"moisture": 24.77,
+"temp": 29.49,
+"humidity": 67.35
+}
+},
+{
+"field_id": "FLD-0126",
+"farmer_id": "FRM-0049",
+"field_name": "Khasra 7061",
+"khasra_no": 7061,
+"area_acres": 6.82,
+"soil_type": "Clay",
+"soil_ph": 7.31,
+"soil_ec": 1.22,
+"ownership_type": "Owned",
+"irrigation_method": "Flood",
+"village": "Piran Kaliyar",
+"latitude": 29.944031,
+"longitude": 78.155507,
+"_baseline": {
+"moisture": 24.44,
+"temp": 25.32,
+"humidity": 68.7
+}
+},
+{
+"field_id": "FLD-0127",
+"farmer_id": "FRM-0049",
+"field_name": "Khasra 365",
+"khasra_no": 365,
+"area_acres": 2.07,
+"soil_type": "Clay",
+"soil_ph": 7.13,
+"soil_ec": 1.19,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Piran Kaliyar",
+"latitude": 30.016862,
+"longitude": 78.153421,
+"_baseline": {
+"moisture": 24.35,
+"temp": 27.08,
+"humidity": 66.74
+}
+},
+{
+"field_id": "FLD-0128",
+"farmer_id": "FRM-0050",
+"field_name": "Khasra 3385",
+"khasra_no": 3385,
+"area_acres": 2.59,
+"soil_type": "Alluvial",
+"soil_ph": 7.25,
+"soil_ec": 1.16,
+"ownership_type": "Owned",
+"irrigation_method": "Sprinkler",
+"village": "Piran Kaliyar",
+"latitude": 30.023206,
+"longitude": 78.13561,
+"_baseline": {
+"moisture": 24.58,
+"temp": 27.95,
+"humidity": 69.4
+}
+},
+{
+"field_id": "FLD-0129",
+"farmer_id": "FRM-0050",
+"field_name": "Khasra 4897",
+"khasra_no": 4897,
+"area_acres": 3.0,
+"soil_type": "Sandy",
+"soil_ph": 7.21,
+"soil_ec": 1.02,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Piran Kaliyar",
+"latitude": 30.019913,
+"longitude": 78.14642,
+"_baseline": {
+"moisture": 26.58,
+"temp": 28.47,
+"humidity": 69.71
+}
+},
+{
+"field_id": "FLD-0130",
+"farmer_id": "FRM-0050",
+"field_name": "Khasra 9128",
+"khasra_no": 9128,
+"area_acres": 1.32,
+"soil_type": "Sandy",
+"soil_ph": 7.08,
+"soil_ec": 1.33,
+"ownership_type": "Leased",
+"irrigation_method": "Flood",
+"village": "Piran Kaliyar",
+"latitude": 29.957028,
+"longitude": 78.1753,
+"_baseline": {
+"moisture": 26.92,
+"temp": 28.83,
+"humidity": 67.93
+}
+}
+]

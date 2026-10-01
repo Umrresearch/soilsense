@@ -1,0 +1,81 @@
+/* =====================================================================
+   Dark Emerald design tokens — see docs/DESIGN_SYSTEM.md for rationale
+   and contrast ratios. Components reference roles, never raw hex.
+   ===================================================================== */
+:root {
+  color-scheme: dark;
+
+  /* ---- Emerald ramp ---- */
+  --emerald-50:  #ECFDF5;
+  --emerald-100: #D1FAE5;
+  --emerald-200: #A7F3D0;
+  --emerald-300: #6EE7B7;
+  --emerald-400: #34D399;   /* Emerald Light — accents, highlights, focus */
+  --emerald-500: #10B981;
+  --emerald-600: #059669;
+  --emerald-700: #047857;   /* Main Emerald — primary buttons, active nav */
+  --emerald-800: #065F46;   /* Emerald Dark — hover */
+  --emerald-900: #064E3B;   /* pressed / deep sections */
+  --emerald-950: #022C22;
+
+  /* ---- Surfaces (green-tinted near-black) ---- */
+  --bg:            #04140E;
+  --surface-1:     #0A1F17;   /* cards, sidebar */
+  --surface-2:     #0F2A20;   /* inputs, chart plot, raised */
+  --surface-3:     #163A2C;   /* hover rows, selected */
+  --border:        #1E4636;
+  --border-strong: #43856A;   /* 3.5:1 on surface-2 — form-control boundary (WCAG 1.4.11) */
+  --overlay:       rgba(2, 10, 7, 0.72);
+
+  /* ---- Text ---- */
+  --text-primary:   #E8F3EE;  /* 16.6:1 on --bg */
+  --text-secondary: #A9C2B7;  /* 10.0:1 */
+  --text-muted:     #7A968A;  /*  5.9:1 */
+  --text-on-primary:#FFFFFF;  /*  5.5:1 on emerald-700 */
+  --text-accent:    var(--emerald-400);
+
+  /* ---- Functional / status (always paired with icon + label) ---- */
+  --success:  #4ADE80;  --success-bg: rgba(74, 222, 128, 0.12);  --success-border: rgba(74, 222, 128, 0.35);
+  --warning:  #FB923C;  --warning-bg: rgba(251, 146, 60, 0.12);  --warning-border: rgba(251, 146, 60, 0.38);
+  --danger:   #F87171;  --danger-bg:  rgba(248, 113, 113, 0.12); --danger-border:  rgba(248, 113, 113, 0.40);
+  --info:     #38BDF8;  --info-bg:    rgba(56, 189, 248, 0.12);  --info-border:    rgba(56, 189, 248, 0.38);
+
+  /* ---- Data-viz series (validated: dark mode, all-pairs, on --surface-2) ---- */
+  --series-moisture:    #3987E5;  /* blue  — water */
+  --series-temperature: #D95926;  /* orange — heat */
+  --series-humidity:    #199E70;  /* aqua  — air */
+  --viz-grid:  #1A3D30;
+  --viz-axis:  #7A968A;
+
+  /* ---- Typography ---- */
+  --font-heading: 'Sora', 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', 'Noto Sans', sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --fs-xs: 0.75rem;   /* 12 — captions, axis ticks */
+  --fs-sm: 0.875rem;  /* 14 — secondary text, table */
+  --fs-md: 1rem;      /* 16 — body, inputs (no iOS zoom) */
+  --fs-lg: 1.125rem;  /* 18 — card titles */
+  --fs-xl: 1.5rem;    /* 24 — page titles */
+  --fs-2xl: 2rem;     /* 32 — stat values */
+  --fs-hero: clamp(2.25rem, 5vw + 1rem, 3.75rem);
+
+  /* ---- Space, radius, elevation, motion ---- */
+  --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 20px; --radius-full: 999px;
+  --shadow-1: 0 1px 2px rgba(0,0,0,.35);
+  --shadow-2: 0 8px 24px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.02) inset;
+  --shadow-3: 0 24px 64px rgba(0,0,0,.55);
+  --focus-ring: 0 0 0 3px rgba(52, 211, 153, 0.45);
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --dur: 160ms;
+
+  --header-h: 60px;
+  --sidebar-w: 248px;
+  --sidebar-w-collapsed: 72px;
+  --touch: 44px;   /* minimum touch target */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}
