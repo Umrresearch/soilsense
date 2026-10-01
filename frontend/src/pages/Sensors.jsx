@@ -20,14 +20,14 @@ function SensorChart({ sensor, period, t }) {
   let band, lines = [], legend = [{ label: `${meta.label} (${period === 'day' ? 'hourly' : period === 'week' ? '6-hourly' : 'daily'} average)`, color: meta.hex }];
   if (t && sensor.sensor_type === 'SOIL_MOISTURE') {
     band = [t.moisture_low, t.moisture_high];
-    lines = [{ y: t.moisture_low, label: `Irrigate below ${t.moisture_low}%`, color: '#FB923C' }, { y: t.moisture_critical, label: `Critical ${t.moisture_critical}%`, color: '#F87171' }];
-    legend.push({ label: 'Thresholds', color: '#FB923C', dashed: true }, { label: 'Healthy range', color: 'rgba(74,222,128,.35)' });
+    lines = [{ y: t.moisture_low, label: `Irrigate below ${t.moisture_low}%`, color: '#A3500A' }, { y: t.moisture_critical, label: `Critical ${t.moisture_critical}%`, color: '#B91C1C' }];
+    legend.push({ label: 'Thresholds', color: '#A3500A', dashed: true }, { label: 'Healthy range', color: 'rgba(20,122,58,.35)' });
   } else if (t && sensor.sensor_type === 'TEMPERATURE') {
-    lines = [{ y: t.temp_high, label: `Heat stress ${t.temp_high}°C`, color: '#FB923C' }];
-    legend.push({ label: 'Threshold', color: '#FB923C', dashed: true });
+    lines = [{ y: t.temp_high, label: `Heat stress ${t.temp_high}°C`, color: '#A3500A' }];
+    legend.push({ label: 'Threshold', color: '#A3500A', dashed: true });
   } else if (t && sensor.sensor_type === 'HUMIDITY') {
-    lines = [{ y: t.humidity_high, label: `Disease risk ${t.humidity_high}%`, color: '#FB923C' }];
-    legend.push({ label: 'Threshold', color: '#FB923C', dashed: true });
+    lines = [{ y: t.humidity_high, label: `Disease risk ${t.humidity_high}%`, color: '#A3500A' }];
+    legend.push({ label: 'Threshold', color: '#A3500A', dashed: true });
   }
   const sum = a.data?.summary;
   return (
@@ -138,7 +138,7 @@ export default function Sensors() {
             const Icon = ICONS[s.sensor_type];
             const [tone, label, HIcon] = HEALTH[s.health] ?? HEALTH.NO_DATA;
             return (
-              <div className="card stat" key={s.sensor_id} style={{ transition: 'border-color .3s', borderColor: flash === s.sensor_id ? 'var(--emerald-400)' : undefined }}>
+              <div className="card stat" key={s.sensor_id} style={{ transition: 'border-color .3s', borderColor: flash === s.sensor_id ? 'var(--emerald-700)' : undefined }}>
                 <div className="row">
                   <span className="stat-label"><Icon aria-hidden />{meta.label}</span>
                   <div className="spacer" />

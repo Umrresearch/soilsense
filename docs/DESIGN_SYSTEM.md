@@ -1,4 +1,28 @@
-# Dark Emerald Design System
+# Cream & Emerald Design System
+
+> **Update (Oct 2026): the app now uses a light cream + emerald theme.** The emerald ramp, typography and components below are unchanged. Surfaces, text and status colours moved to the light values in this table (the source of truth is `frontend/src/styles/tokens.css`). The dark-emerald values further down are kept for reference, e.g. for a future dark mode.
+
+| Role | Token | Hex | Contrast |
+|---|---|---|---|
+| Page background (light cream) | `--bg` | `#FBF7EE` | — |
+| Cards / sidebar / modals | `--surface-1` | `#FFFDF8` | — |
+| Inputs, metric tiles, table heads | `--surface-2` | `#F4EEE1` | — |
+| Hover / selected | `--surface-3` | `#ECE4D2` | — |
+| Divider | `--border` | `#E4DAC5` | decorative |
+| Form-control border | `--border-strong` | `#7A8A7E` | 3.2 : 1 on surface-2 |
+| Text (deep green ink) | `--text-primary` | `#132A20` | 14.2 : 1 |
+| Body / labels | `--text-secondary` | `#44584D` | 7.2 : 1 |
+| Captions | `--text-muted` | `#5A6A60` | 5.4 : 1 |
+| Primary button / links / active nav | `--emerald-700` | `#047857` | white on it 5.5 : 1; on cream 5.1 : 1 |
+| Hover / pressed | `--emerald-800` / `-900` | `#065F46` / `#064E3B` | |
+| Success · Warning · Danger · Info | | `#147A3A` · `#A3500A` · `#B91C1C` · `#036594` | all ≥ 4.3 : 1 on surface-2 |
+| Chart series (moisture · temp · humidity) | | `#2A78D6` · `#EB6834` · `#1BAF7A` | validated light-mode, all-pairs; every chart has a table view |
+
+Emerald fills the brand blocks: the logo tile, the primary buttons, the auth-page side panel and the landing-page call-to-action band, all with cream text.
+
+---
+
+# (Reference) Dark Emerald Design System
 
 Phase 1 deliverable. Every value here is implemented in `frontend/src/styles/tokens.css`; components reference **roles** (`--surface-1`, `--text-muted`) rather than raw hex, so a palette change happens in one file.
 

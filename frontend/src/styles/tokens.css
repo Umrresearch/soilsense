@@ -1,9 +1,9 @@
 /* =====================================================================
-   Dark Emerald design tokens — see docs/DESIGN_SYSTEM.md for rationale
+   Cream & Emerald design tokens — see docs/DESIGN_SYSTEM.md for rationale
    and contrast ratios. Components reference roles, never raw hex.
    ===================================================================== */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
   /* ---- Emerald ramp ---- */
   --emerald-50:  #ECFDF5;
@@ -18,34 +18,37 @@
   --emerald-900: #064E3B;   /* pressed / deep sections */
   --emerald-950: #022C22;
 
-  /* ---- Surfaces (green-tinted near-black) ---- */
-  --bg:            #04140E;
-  --surface-1:     #0A1F17;   /* cards, sidebar */
-  --surface-2:     #0F2A20;   /* inputs, chart plot, raised */
-  --surface-3:     #163A2C;   /* hover rows, selected */
-  --border:        #1E4636;
-  --border-strong: #43856A;   /* 3.5:1 on surface-2 — form-control boundary (WCAG 1.4.11) */
-  --overlay:       rgba(2, 10, 7, 0.72);
+  /* ---- Surfaces (warm light cream) ---- */
+  --bg:            #FBF7EE;   /* page — light cream */
+  --surface-1:     #FFFDF8;   /* cards, sidebar, modals */
+  --surface-2:     #F4EEE1;   /* inputs, metric tiles, table headers */
+  --surface-3:     #ECE4D2;   /* hover rows, selected */
+  --border:        #E4DAC5;   /* decorative dividers */
+  --border-strong: #7A8A7E;   /* 3.2:1 on surface-2 — form-control boundary (WCAG 1.4.11) */
+  --overlay:       rgba(19, 42, 32, 0.45);
 
-  /* ---- Text ---- */
-  --text-primary:   #E8F3EE;  /* 16.6:1 on --bg */
-  --text-secondary: #A9C2B7;  /* 10.0:1 */
-  --text-muted:     #7A968A;  /*  5.9:1 */
+  /* ---- Text (deep green ink) ---- */
+  --text-primary:   #132A20;  /* 14.2:1 on --bg */
+  --text-secondary: #44584D;  /*  7.2:1 */
+  --text-muted:     #5A6A60;  /*  5.4:1 on bg, 5.0:1 on surface-2 */
   --text-on-primary:#FFFFFF;  /*  5.5:1 on emerald-700 */
-  --text-accent:    var(--emerald-400);
+  --accent-text:    var(--emerald-700);   /* links, active nav, highlights — 5.1:1 on bg */
+  --accent-strong:  var(--emerald-800);
+  --accent-soft:    rgba(4, 120, 87, 0.09);   /* tinted emerald backgrounds */
+  --accent-soft-border: rgba(4, 120, 87, 0.28);
 
   /* ---- Functional / status (always paired with icon + label) ---- */
-  --success:  #4ADE80;  --success-bg: rgba(74, 222, 128, 0.12);  --success-border: rgba(74, 222, 128, 0.35);
-  --warning:  #FB923C;  --warning-bg: rgba(251, 146, 60, 0.12);  --warning-border: rgba(251, 146, 60, 0.38);
-  --danger:   #F87171;  --danger-bg:  rgba(248, 113, 113, 0.12); --danger-border:  rgba(248, 113, 113, 0.40);
-  --info:     #38BDF8;  --info-bg:    rgba(56, 189, 248, 0.12);  --info-border:    rgba(56, 189, 248, 0.38);
+  --success:  #147A3A;  --success-bg: rgba(20, 122, 58, 0.10);  --success-border: rgba(20, 122, 58, 0.32);
+  --warning:  #A3500A;  --warning-bg: rgba(217, 119, 6, 0.12);  --warning-border: rgba(163, 80, 10, 0.32);
+  --danger:   #B91C1C;  --danger-bg:  rgba(185, 28, 28, 0.08);  --danger-border:  rgba(185, 28, 28, 0.30);
+  --info:     #036594;  --info-bg:    rgba(3, 101, 148, 0.08);  --info-border:    rgba(3, 101, 148, 0.30);
 
-  /* ---- Data-viz series (validated: dark mode, all-pairs, on --surface-2) ---- */
-  --series-moisture:    #3987E5;  /* blue  — water */
-  --series-temperature: #D95926;  /* orange — heat */
-  --series-humidity:    #199E70;  /* aqua  — air */
-  --viz-grid:  #1A3D30;
-  --viz-axis:  #7A968A;
+  /* ---- Data-viz series (validated: light mode, all-pairs, on --surface-1) ---- */
+  --series-moisture:    #2A78D6;  /* blue  — water */
+  --series-temperature: #EB6834;  /* orange — heat */
+  --series-humidity:    #1BAF7A;  /* aqua  — air (charts also ship a table view) */
+  --viz-grid:  #EAE2D0;
+  --viz-axis:  #5A6A60;
 
   /* ---- Typography ---- */
   --font-heading: 'Sora', 'Inter', system-ui, sans-serif;
@@ -63,10 +66,10 @@
   /* ---- Space, radius, elevation, motion ---- */
   --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
   --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 20px; --radius-full: 999px;
-  --shadow-1: 0 1px 2px rgba(0,0,0,.35);
-  --shadow-2: 0 8px 24px rgba(0,0,0,.35), 0 1px 0 rgba(255,255,255,.02) inset;
-  --shadow-3: 0 24px 64px rgba(0,0,0,.55);
-  --focus-ring: 0 0 0 3px rgba(52, 211, 153, 0.45);
+  --shadow-1: 0 1px 2px rgba(60, 45, 20, .06);
+  --shadow-2: 0 8px 24px rgba(60, 45, 20, .10);
+  --shadow-3: 0 24px 60px rgba(40, 30, 10, .18);
+  --focus-ring: 0 0 0 3px rgba(4, 120, 87, 0.35);
   --ease: cubic-bezier(.2,.7,.2,1);
   --dur: 160ms;
 

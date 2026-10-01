@@ -13,7 +13,7 @@ h1 { font-size: var(--fs-xl); font-weight: 700; }
 h2 { font-size: var(--fs-lg); font-weight: 600; }
 h3 { font-size: var(--fs-md); font-weight: 600; }
 p { margin: 0; }
-a { color: var(--emerald-400); text-decoration: none; }
+a { color: var(--accent-text); text-decoration: none; }
 a:hover { text-decoration: underline; }
 button, input, select, textarea { font: inherit; color: inherit; }
 img, svg { display: block; }

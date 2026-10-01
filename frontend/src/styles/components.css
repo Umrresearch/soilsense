@@ -38,14 +38,14 @@
   transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 .input::placeholder { color: var(--text-muted); }
-.input:hover, .select:hover { border-color: var(--emerald-800); }
-.input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--emerald-400); box-shadow: var(--focus-ring); }
+.input:hover, .select:hover { border-color: var(--emerald-700); }
+.input:focus, .select:focus, .textarea:focus { outline: none; border-color: var(--emerald-700); box-shadow: var(--focus-ring); }
 .input:disabled, .select:disabled { opacity: .55; cursor: not-allowed; }
 .input[aria-invalid="true"], .select[aria-invalid="true"] { border-color: var(--danger); }
 .input[type="number"] { font-family: var(--font-mono); }
-.input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(.8); cursor: pointer; }
+.input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; }
 .select { appearance: none; padding-right: 40px; cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23A9C2B7' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%2344584D' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 14px center; }
 .form-hint { font-size: var(--fs-xs); color: var(--text-muted); }
 .form-error { font-size: var(--fs-xs); color: var(--danger); display: flex; gap: 4px; align-items: center; }
@@ -72,7 +72,7 @@
 
 .stat { display: flex; flex-direction: column; gap: 6px; }
 .stat-label { font-size: var(--fs-xs); color: var(--text-secondary); text-transform: uppercase; letter-spacing: .06em; font-weight: 600; display: flex; align-items: center; gap: 6px; }
-.stat-label svg { width: 16px; height: 16px; color: var(--emerald-400); }
+.stat-label svg { width: 16px; height: 16px; color: var(--accent-text); }
 .stat-value { font-family: var(--font-mono); font-size: var(--fs-2xl); font-weight: 600; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .stat-value small { font-size: var(--fs-sm); color: var(--text-muted); font-weight: 500; margin-left: 4px; }
 .stat-foot { font-size: var(--fs-xs); color: var(--text-muted); }
@@ -86,7 +86,7 @@
 .badge-warning { color: var(--warning); background: var(--warning-bg); border-color: var(--warning-border); }
 .badge-danger  { color: var(--danger);  background: var(--danger-bg);  border-color: var(--danger-border); }
 .badge-info    { color: var(--info);    background: var(--info-bg);    border-color: var(--info-border); }
-.badge-emerald { color: var(--emerald-300); background: rgba(16,185,129,.12); border-color: rgba(52,211,153,.35); }
+.badge-emerald { color: var(--accent-strong); background: var(--accent-soft); border-color: var(--accent-soft-border); }
 
 /* ============================ Alerts ============================ */
 .alert { display: flex; gap: var(--sp-3); padding: var(--sp-3) var(--sp-4); border-radius: var(--radius-md); border: 1px solid; font-size: var(--fs-sm); align-items: flex-start; }
@@ -124,7 +124,7 @@
 @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } }
 
 /* ============================ Spinner / skeleton ============================ */
-.spinner { width: 20px; height: 20px; border-radius: 50%; border: 2.5px solid var(--border-strong); border-top-color: var(--emerald-400); animation: spin .8s linear infinite; }
+.spinner { width: 20px; height: 20px; border-radius: 50%; border: 2.5px solid var(--border-strong); border-top-color: var(--emerald-700); animation: spin .8s linear infinite; }
 .spinner-lg { width: 36px; height: 36px; border-width: 3px; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .center-pad { display: grid; place-items: center; padding: var(--sp-12) var(--sp-4); gap: var(--sp-3); color: var(--text-muted); text-align: center; }
@@ -137,7 +137,7 @@
 .table th { text-align: left; font-weight: 600; color: var(--text-secondary); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: .05em;
   background: var(--surface-2); padding: 10px 12px; position: sticky; top: 0; white-space: nowrap; }
 .table td { padding: 10px 12px; border-top: 1px solid var(--border); vertical-align: top; }
-.table tr:hover td { background: rgba(22, 58, 44, .5); }
+.table tr:hover td { background: var(--surface-2); }
 .table td.num, .table th.num { text-align: right; }
 
 /* ============================ Tabs / segmented ============================ */
