@@ -18,7 +18,7 @@
 | Success · Warning · Danger · Info | | `#147A3A` · `#A3500A` · `#B91C1C` · `#036594` | all ≥ 4.3 : 1 on surface-2 |
 | Chart series (moisture · temp · humidity) | | `#2A78D6` · `#EB6834` · `#1BAF7A` | validated light-mode, all-pairs; every chart has a table view |
 
-Emerald fills the brand blocks: the logo tile, the primary buttons, the auth-page side panel and the landing-page call-to-action band, all with cream text.
+**Dark emerald carries the structure, cream is the canvas.** The sidebar (and mobile tab bar), every stat/KPI tile, the dashboard welcome card, the auth side panel and the landing call-to-action band use deep emerald (`#064E3B` → `#022C22`) with cream text (`#FBF7EE`, ≈ 10.9 : 1). Charts, tables and forms sit on cream panels. On dark tiles, status badges switch to light tints (e.g. success `#BBF7D0`, danger `#FECACA`) to stay readable.
 
 ---
 

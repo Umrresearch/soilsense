@@ -25,15 +25,26 @@ r.get('/:farmerId/summary', requireSelf('farmerId'), ah(async (req, res) => {
              FROM v_sensor_status v JOIN fields f USING (field_id) WHERE f.farmer_id = $1`, [id]),
     query(`SELECT r.type, r.priority, count(*)::int AS n FROM recommendations r JOIN fields f USING (field_id)
             WHERE f.farmer_id = $1 AND r.status = 'PENDING' GROUP BY 1, 2`, [id]),
-    query(`SELECT COALESCE(sum(water_amount),0) AS litres_7d, count(*)::int AS sessions_7d
-             FROM irrigation_logs l JOIN fields f USING (field_id) WHERE f.farmer_id = $1 AND l."timestamp" > now() - interval '7 days'`, [id]),
+    query(`SELECT COALESCE(sum(water_amount) FILTER (WHERE l."timestamp" > now() - interval '7 days'),0) AS litres_7d,
+                  count(*) FILTER (WHERE l."timestamp" > now() - interval '7 days')::int AS sessions_7d,
+                  COALESCE(sum(water_amount) FILTER (WHERE l."timestamp" <= now() - interval '7 days'),0) AS litres_prev_7d
+             FROM irrigation_logs l JOIN fields f USING (field_id)
+            WHERE f.farmer_id = $1 AND l."timestamp" > now() - interval '14 days'`, [id]),
     query(`SELECT COALESCE(sum(amount),0) AS kg_30d, count(*)::int AS applications_30d
              FROM fertilizer_logs l JOIN fields f USING (field_id) WHERE f.farmer_id = $1 AND l."timestamp" > now() - interval '30 days'`, [id]),
     query(`${fieldSummarySql} WHERE f.farmer_id = $1 ORDER BY top_priority_rank DESC NULLS LAST, f.field_id`, [id]),
   ]);
+  // trend context for the KPI cards: soil moisture ~24 h ago, advice applied this week
+  const { rows: [trend] } = await query(
+    `SELECT round(avg(r.value) FILTER (WHERE r."timestamp" BETWEEN now() - interval '27 hours' AND now() - interval '21 hours'), 1) AS soil_moisture_24h_ago,
+            (SELECT count(*)::int FROM recommendations rc JOIN fields f2 USING (field_id)
+              WHERE f2.farmer_id = $1 AND rc.status = 'APPLIED' AND rc.resolved_at > now() - interval '7 days') AS applied_7d
+       FROM sensor_readings r JOIN sensors s USING (sensor_id) JOIN fields f USING (field_id)
+      WHERE f.farmer_id = $1 AND s.sensor_type = 'SOIL_MOISTURE' AND r.status = 'GOOD'
+        AND r."timestamp" > now() - interval '27 hours'`, [id]);
   const pending = { total: 0, byType: { IRRIGATION: 0, FERTILIZER: 0, ALERT: 0 }, byPriority: { CRITICAL: 0, HIGH: 0, MEDIUM: 0, LOW: 0 } };
   for (const x of recs) { pending.total += x.n; pending.byType[x.type] += x.n; pending.byPriority[x.priority] += x.n; }
-  res.json({ farmer_id: id, totals, sensors, pending, water, fertilizer: fert, fields, generated_at: new Date().toISOString() });
+  res.json({ farmer_id: id, totals, sensors, pending, water, fertilizer: fert, trend, fields, generated_at: new Date().toISOString() });
 }));
 
 // GET /api/dashboard/:farmerId/alerts — urgent recommendations + sensor problems

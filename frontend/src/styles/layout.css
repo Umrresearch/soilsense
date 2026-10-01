@@ -152,3 +152,55 @@
 .cta-band .btn-primary { --btn-bg: #FBF7EE; --btn-fg: var(--emerald-800); --btn-border: #FBF7EE; }
 .cta-band .btn-primary:hover:not(:disabled) { --btn-bg: #FFFFFF; --btn-border: #FFFFFF; }
 .auth-aside .brand-mark { box-shadow: 0 0 0 1px rgba(246, 241, 228, 0.35); }
+
+/* ============================ Dark-emerald sidebar (cream content) ============================ */
+:root {
+  --deep-1: #064E3B;           /* emerald-900 */
+  --deep-2: #033D2E;
+  --deep-3: #022C22;           /* emerald-950 */
+  --on-deep:        #FBF7EE;   /* cream on deep emerald  ≈ 10.9:1 */
+  --on-deep-2:      rgba(251, 247, 238, 0.80);
+  --on-deep-muted:  rgba(251, 247, 238, 0.66);
+  --on-deep-line:   rgba(251, 247, 238, 0.14);
+  --on-deep-hover:  rgba(251, 247, 238, 0.08);
+  --on-deep-active: rgba(251, 247, 238, 0.14);
+  --on-deep-accent: #6EE7B7;
+}
+.sidebar { background: linear-gradient(180deg, var(--deep-1) 0%, var(--deep-2) 55%, var(--deep-3) 100%); border-right: 0; color: var(--on-deep); }
+.sidebar .brand, .sidebar .brand-name { color: var(--on-deep); }
+.sidebar .brand-name small { color: var(--on-deep-muted); }
+.sidebar .brand-mark { background: var(--on-deep); }
+.sidebar .brand-mark svg { color: var(--emerald-800); }
+.sidebar .nav-link { color: var(--on-deep-2); }
+.sidebar .nav-link:hover { background: var(--on-deep-hover); color: var(--on-deep); }
+.sidebar .nav-link.active { background: var(--on-deep-active); color: #FFFFFF; }
+.sidebar .nav-link.active::before { background: var(--on-deep-accent); }
+.sidebar .nav-link:focus-visible { box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.55); }
+.sidebar-foot { border-top-color: var(--on-deep-line); }
+@media (max-width: 768px) {
+  .bottom-nav { background: rgba(3, 61, 46, 0.97); border-top: 0; }
+  .bottom-nav a { color: var(--on-deep-muted); }
+  .bottom-nav a.active { color: #FFFFFF; }
+  .bottom-nav a.active svg { color: var(--on-deep-accent); }
+}
+
+/* ============================ Dark-emerald "mini boxes" (stat / KPI tiles) ============================ */
+.card.stat, .dash-kpi {
+  background: linear-gradient(155deg, #065F46 0%, var(--deep-1) 60%, var(--deep-2) 100%);
+  border-color: transparent; color: var(--on-deep); box-shadow: 0 8px 22px rgba(6, 78, 59, 0.18);
+}
+.card.stat .stat-label, .dash-kpi .dash-kpi-label { color: var(--on-deep-2); }
+.card.stat .stat-label svg { color: var(--on-deep-accent); }
+.card.stat .stat-value, .dash-kpi .dash-kpi-value { color: #FFFFFF; }
+.card.stat .stat-value small, .dash-kpi .dash-kpi-value small { color: var(--on-deep-muted); }
+.card.stat .stat-foot, .card.stat .stat-foot .num, .dash-kpi .dash-kpi-foot { color: var(--on-deep-muted); }
+.dash-kpi .dash-kpi-icon { background: var(--on-deep); color: var(--emerald-800); }
+.dash-kpi.is-link:hover { border-color: rgba(110, 231, 183, 0.45); }
+/* status colours re-stepped for the dark tile */
+.card.stat .badge, .dash-kpi .dash-delta { background: rgba(251, 247, 238, 0.12); border-color: rgba(251, 247, 238, 0.22); color: var(--on-deep); }
+.card.stat .badge-success, .dash-kpi .dash-delta.is-good { background: rgba(134, 239, 172, 0.16); border-color: rgba(134, 239, 172, 0.40); color: #BBF7D0; }
+.card.stat .badge-warning { background: rgba(253, 186, 116, 0.16); border-color: rgba(253, 186, 116, 0.42); color: #FED7AA; }
+.card.stat .badge-danger, .dash-kpi .dash-delta.is-bad { background: rgba(252, 165, 165, 0.16); border-color: rgba(252, 165, 165, 0.42); color: #FECACA; }
+.card.stat .badge-info { background: rgba(125, 211, 252, 0.16); border-color: rgba(125, 211, 252, 0.40); color: #BAE6FD; }
+.card.stat [style*="--warning"], .card.stat [style*="var(--warning)"] { color: #FED7AA !important; }
+.card.stat [style*="var(--danger)"] { color: #FECACA !important; }

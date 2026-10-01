@@ -67,7 +67,7 @@ export function MetricChart({ data, dataKey = 'value', name, unit, color, period
           ))}
           <XAxis dataKey="t" {...axisProps} tickFormatter={(t) => fmtTick(t, period)} minTickGap={36}
             ticks={period === 'week' ? data.filter((_, i) => i % 4 === 0).map((d) => d.t) : undefined} />
-          <YAxis {...axisProps} domain={domain} width={48} tickFormatter={(v) => fmtNum(v, 0)} />
+          <YAxis {...axisProps} domain={domain} width={48} tickFormatter={(v) => fmtNum(v, Number.isInteger(v) ? 0 : 1)} />
           <Tooltip content={<SeriesTooltip unit={unit} />} cursor={{ stroke: 'var(--border-strong)', strokeWidth: 1 }} />
           <Line type="monotone" dataKey={dataKey} name={name} unit={unit} stroke={color} strokeWidth={2} dot={false}
             activeDot={{ r: 5, stroke: 'var(--surface-1)', strokeWidth: 2 }} connectNulls={false} isAnimationActive={false} />
