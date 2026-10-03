@@ -1,6 +1,6 @@
-# SoilSense Design System — "Kolkhoz Concrete"
+# SoilSense Design System
 
-> **Current theme (Oct 2026): dark brutalism × agriculture.** Soviet-modernist concrete language — square slabs, 2 px formwork seams, hard offset shadows, monumental condensed type, numbered sections and mono "plate" labels — applied to a farming product: **emerald** for crop, **harvest wheat** for highlights. Source of truth: `frontend/src/styles/tokens.css` + `brutal.css` (+ `landing.css`).
+> **Current theme (Oct 2026): dark brutalism × agriculture.** A bold, blocky visual language — square slabs, 2 px formwork seams, hard offset shadows, monumental condensed type, numbered sections and mono "plate" labels — applied to a farming product: **emerald** for crop, **harvest wheat** for highlights. Source of truth: `frontend/src/styles/tokens.css` + `brutal.css` (+ `landing.css`).
 
 | Role | Token | Value | Contrast |
 |---|---|---|---|

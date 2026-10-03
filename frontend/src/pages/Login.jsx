@@ -11,7 +11,7 @@ export function AuthLayout({ children, quote = '“The best fertilizer is the fa
       <aside className="auth-aside">
         <Logo />
         <blockquote>{quote}</blockquote>
-        <span className="muted" style={{ fontSize: 'var(--fs-sm)' }}>Haridwar · Uttarakhand · Sugarcane belt</span>
+        <span className="muted" style={{ fontSize: 'var(--fs-sm)' }}>Sensor-driven sugarcane advisory</span>
       </aside>
       <main className="auth-main">{children}</main>
     </div>

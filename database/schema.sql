@@ -233,7 +233,7 @@ CREATE TABLE crop_records (
 CREATE INDEX ix_crop_field_year ON crop_records (field_id, season_year DESC);
 
 -- ---------------------------------------------------------------------
--- 9. THRESHOLDS  (one row per farmer; defaults tuned for sugarcane in Haridwar alluvial soils)
+-- 9. THRESHOLDS  (one row per farmer; defaults tuned for sugarcane on alluvial soils)
 -- ---------------------------------------------------------------------
 CREATE TABLE thresholds (
   farmer_id            VARCHAR(12)  PRIMARY KEY REFERENCES farmers(farmer_id) ON DELETE CASCADE,

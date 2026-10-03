@@ -79,7 +79,7 @@ function Thresholds() {
   };
   return (
     <div className="stack">
-      <Alert tone="info" title="When do alerts trigger?">Defaults suit sugarcane on Haridwar alluvial soils. Changing a value immediately re-checks every field.</Alert>
+      <Alert tone="info" title="When do alerts trigger?">Defaults suit sugarcane on alluvial soils. Changing a value immediately re-checks every field.</Alert>
       <div className="grid grid-2">
         {T_GROUPS.map((g) => (
           <Card key={g.title} title={g.title} sub={g.note}>

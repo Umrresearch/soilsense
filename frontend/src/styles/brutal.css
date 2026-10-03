@@ -1,5 +1,5 @@
 /* =====================================================================
-   "Kolkhoz Concrete" — brutalist overrides (loaded last)
+   SoilSense dark theme — overrides (loaded last)
    Square slabs, 2px formwork seams, hard offset shadows, monumental
    condensed headings, mono labels. Emerald = crop, wheat = harvest.
    ===================================================================== */
@@ -115,7 +115,7 @@ a { color: var(--accent-text); text-underline-offset: 3px; }
 /* ---------- dashboard specifics ---------- */
 .dash-welcome { border-radius: 0; background: var(--wheat); color: var(--text-on-wheat); border: var(--bw) solid #000; box-shadow: var(--shadow-hard); }
 .dash-welcome-glow { display: none; }
-.dash-welcome::after { /* constructivist diagonal band */
+.dash-welcome::after { /* diagonal band */
   content: ''; position: absolute; right: -90px; top: -30px; width: 170px; height: 300px; background: var(--emerald-700);
   transform: rotate(28deg); opacity: 0.95; pointer-events: none; border-left: 6px solid #000; }
 .dash-welcome > * { position: relative; z-index: 1; }
@@ -144,7 +144,7 @@ a { color: var(--accent-text); text-underline-offset: 3px; }
 .auth-aside {
   background:
     linear-gradient(180deg, rgba(6, 78, 59, 0.55), rgba(8, 10, 8, 0.92)),
-    url("https://images.unsplash.com/photo-1606707761700-86b58f251a01?w=1200&q=70&auto=format&fit=crop") center / cover;
+    url("https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1200&q=70&auto=format&fit=crop") center / cover;
   border-right: var(--bw) solid #000; color: #F3EFE4;
 }
 .auth-aside blockquote { font-family: var(--font-heading); text-transform: uppercase; font-weight: 900; font-size: clamp(2rem, 2.5vw + 1rem, 3.4rem); line-height: 0.95; }

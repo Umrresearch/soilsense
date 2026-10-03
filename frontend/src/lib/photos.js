@@ -3,15 +3,15 @@
 const CDN = 'https://images.unsplash.com/';
 
 export const PHOTOS = {
-  caneRows:   { id: 'photo-1606707761700-86b58f251a01', alt: 'Rows of young sugarcane stretching to the horizon', by: 'Ashwini Chaudhary (Monty)', page: 'https://unsplash.com/photos/dXoEk6gfV50' },
-  tractor:    { id: 'photo-1606711387932-5ba25bbad5e6', alt: 'Red tractor parked beside a sugarcane field', by: 'Ashwini Chaudhary (Monty)', page: 'https://unsplash.com/photos/egeN7GYoONs' },
-  harvest:    { id: 'photo-1790858986801-4980485e653a', alt: 'Farmer harvesting sugarcane by hand', by: 'proudlyswazi', page: 'https://unsplash.com/photos/ITx3KuAHA48' },
-  concrete:   { id: 'photo-1600730424902-a3a3be6af112', alt: 'Brutalist concrete building with a stepped facade', by: 'Mark McLaughlin', page: 'https://unsplash.com/photos/8_UDWAPHISM' },
-  silos:      { id: 'photo-1692632477775-8a8f4410d425', alt: 'Grain silos and a conveyor tower against the sky', by: 'Cyrus Crossan', page: 'https://unsplash.com/photos/lz3RZ7COLGw' },
-  sprinklers: { id: 'photo-1738598665698-7fd7af4b5e0c', alt: 'Sprinklers irrigating a crop field', by: 'Being Organic in EU', page: 'https://unsplash.com/photos/ZYiOik4jels' },
-  drip:       { id: 'photo-1640677117376-573b9dbb8ea8', alt: 'Young plants in rows with drip irrigation lines', by: 'Anil Sharma', page: 'https://unsplash.com/photos/tlRkBCY9vsI' },
-  aerial:     { id: 'photo-1516822277566-bb38424a2b77', alt: 'Aerial view of farm fields in strips', by: 'jean wimmerlin', page: 'https://unsplash.com/photos/RUj5b4YXaHE' },
-  farmers:    { id: 'photo-1707721690544-781fe6ede937', alt: 'Women farmers working together in a field', by: 'EqualStock', page: 'https://unsplash.com/photos/71L0v2kw424' },
+  rows:       { id: 'photo-1560493676-04071c5f467b', alt: 'Long rows of green crops running to the horizon at sunset', by: 'Dan Meyers', page: 'https://unsplash.com/photos/IQVFVH0ajag' },
+  pivot:      { id: 'photo-1692369584496-3216a88f94c1', alt: 'Centre-pivot irrigation spraying water over a green crop', by: 'Lumin Osity', page: 'https://unsplash.com/photos/6DMht7wYt6g' },
+  planting:   { id: 'photo-1590682680695-43b964a3ae17', alt: 'Hands in dark soil planting a seedling', by: 'GreenForce Staffing', page: 'https://unsplash.com/photos/bYZn_C-RswQ' },
+  soil:       { id: 'photo-1492496913980-501348b61469', alt: 'Cupped hands holding a mound of rich soil', by: 'Gabriel Jimenez', page: 'https://unsplash.com/photos/jin4W1HqgL4' },
+  dew:        { id: 'photo-1446608943998-cbd52b140335', alt: 'Water droplets resting on a green leaf', by: 'dan carlson', page: 'https://unsplash.com/photos/G86MS2ZsiJA' },
+  harvest:    { id: 'photo-1530507629858-e4977d30e9e0', alt: 'Farmer carrying a bundle of green seedlings', by: 'Nandhu Kumar', page: 'https://unsplash.com/photos/5NGTf4oD8RA' },
+  sprouts:    { id: 'photo-1586771107445-d3ca888129ff', alt: 'Young green sprouts in furrowed soil under low sun', by: 'Jan Kopřiva', page: 'https://unsplash.com/photos/LTMaAwxanGk' },
+  paddy:      { id: 'photo-1542911882-c7100ccf771b', alt: 'Farmer walking through a flooded field of young plants', by: 'Foto Murthy', page: 'https://unsplash.com/photos/lXVWulsnNQE' },
+  aerial:     { id: 'photo-1525858628969-2c3e8d8e1b42', alt: 'Aerial view of green farmland', by: 'Ivan Bandura', page: 'https://unsplash.com/photos/g_1_FXigeGc' },
 };
 
 /** Responsive src/srcSet for an Unsplash photo. */

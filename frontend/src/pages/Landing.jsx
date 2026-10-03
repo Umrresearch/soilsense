@@ -25,7 +25,7 @@ const FEATURES = [
 ];
 
 const STATS = [
-  { v: '50', l: 'Farmers in the Haridwar pilot data' },
+  { v: '50', l: 'Farmers in the pilot' },
   { v: '133', l: 'Fields under watch' },
   { v: '399', l: 'Sensors reporting' },
   { v: '3,000+', l: 'Seasons of crop records' },
@@ -75,7 +75,7 @@ export default function Landing() {
         </div>
 
         <div className="lp-hero-visual">
-          <Photo photo={PHOTOS.caneRows} w={1100} h={1300} className="lp-hero-photo" tone="natural" eager caption="Fig. 01 — Sugarcane rows" />
+          <Photo photo={PHOTOS.rows} w={1100} h={1300} className="lp-hero-photo" tone="natural" eager caption="Fig. 01 — Rows at dusk" />
           <div className="lp-reading" aria-label="Example recommendation">
             <div className="lp-reading-head"><span>North plot · FLD-0131</span><span className="lp-tag">High</span></div>
             <div className="lp-reading-action">Irrigate today<br /><b>650 kL</b> · 13 h pumping</div>
@@ -120,7 +120,7 @@ export default function Landing() {
               <p>{f.text}</p>
             </article>
           ))}
-          <Photo photo={PHOTOS.sprinklers} w={900} h={700} className="lp-mosaic-photo" caption="Fig. 02 — Irrigation, measured not guessed" />
+          <Photo photo={PHOTOS.pivot} w={900} h={700} className="lp-mosaic-photo" tone="natural" caption="Fig. 02 — Irrigation, measured not guessed" />
           {FEATURES.slice(3).map((f) => (
             <article className="lp-feature" key={f.n}>
               <span className="lp-feature-n">{f.n}</span>
@@ -129,19 +129,19 @@ export default function Landing() {
               <p>{f.text}</p>
             </article>
           ))}
-          <Photo photo={PHOTOS.drip} w={900} h={700} className="lp-mosaic-photo" tone="wheat" caption="Fig. 03 — Drip lines in young rows" />
+          <Photo photo={PHOTOS.planting} w={900} h={700} className="lp-mosaic-photo" tone="natural" caption="Fig. 03 — Every seedling counts" />
         </div>
       </section>
 
       {/* ---------------- concrete × crop manifesto ---------------- */}
       <section className="lp-manifesto">
-        <Photo photo={PHOTOS.concrete} w={1000} h={1200} className="lp-manifesto-a" tone="mono" caption="Fig. 04 — Infrastructure" />
+        <Photo photo={PHOTOS.soil} w={1000} h={1200} className="lp-manifesto-a" tone="natural" caption="Fig. 04 — Soil first" />
         <div className="lp-manifesto-copy">
           <span className="lp-index">§</span>
-          <h2>Built like infrastructure.<br /><em>Grown for the field.</em></h2>
+          <h2>Start with the soil.<br /><em>Grow from the data.</em></h2>
           <p>
-            Farms run on canals, pumps and silos — things built to last. SoilSense is engineered the same way:
-            a relational database with hard constraints, every reading kept, every decision logged, nothing silently guessed.
+            Good harvests start underground. SoilSense listens to the soil around the clock and keeps an honest record:
+            every reading kept, every decision logged, nothing silently guessed.
           </p>
           <ul className="lp-checks">
             <li><ShieldCheck aria-hidden /> Passwords hashed, data scoped to each farmer</li>
@@ -149,7 +149,7 @@ export default function Landing() {
             <li><ArrowDownRight aria-hidden /> Missing sensor data recorded, never invented</li>
           </ul>
         </div>
-        <Photo photo={PHOTOS.silos} w={900} h={700} className="lp-manifesto-b" tone="wheat" caption="Fig. 05 — Storage" />
+        <Photo photo={PHOTOS.dew} w={900} h={700} className="lp-manifesto-b" tone="natural" caption="Fig. 05 — Every drop" />
       </section>
 
       {/* ---------------- method ---------------- */}
@@ -168,9 +168,9 @@ export default function Landing() {
 
       {/* ---------------- field strip ---------------- */}
       <section className="lp-strip" id="field">
-        <Photo photo={PHOTOS.harvest} w={800} h={1000} tone="natural" caption="Fig. 06 — Harvest" />
-        <Photo photo={PHOTOS.tractor} w={800} h={1000} tone="mono" caption="Fig. 07 — Machinery" />
-        <Photo photo={PHOTOS.farmers} w={800} h={1000} tone="natural" caption="Fig. 08 — The people it serves" />
+        <Photo photo={PHOTOS.harvest} w={800} h={1000} tone="natural" caption="Fig. 06 — Planting season" />
+        <Photo photo={PHOTOS.sprouts} w={800} h={1000} tone="natural" caption="Fig. 07 — First growth" />
+        <Photo photo={PHOTOS.paddy} w={800} h={1000} tone="natural" caption="Fig. 08 — The people it serves" />
       </section>
 
       {/* ---------------- CTA ---------------- */}
@@ -202,7 +202,7 @@ export default function Landing() {
             ))}.</p>
           </div>
         </div>
-        <div className="lp-footer-base">© {new Date().getFullYear()} SoilSense · Haridwar · Uttarakhand</div>
+        <div className="lp-footer-base">© {new Date().getFullYear()} SoilSense · Smart sugarcane advisory</div>
       </footer>
     </div>
   );
