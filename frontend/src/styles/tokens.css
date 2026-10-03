@@ -1,82 +1,93 @@
 /* =====================================================================
-   Cream & Emerald design tokens — see docs/DESIGN_SYSTEM.md for rationale
-   and contrast ratios. Components reference roles, never raw hex.
+   SoilSense — "Kolkhoz Concrete" design tokens
+   Dark brutalism (raw concrete, hard edges, monumental type) meets
+   agriculture (emerald crop green, harvest-wheat gold).
+   Components reference roles, never raw hex. See docs/DESIGN_SYSTEM.md.
    ===================================================================== */
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  /* ---- Emerald ramp ---- */
+  /* ---- Emerald (crop) ---- */
   --emerald-50:  #ECFDF5;
   --emerald-100: #D1FAE5;
   --emerald-200: #A7F3D0;
   --emerald-300: #6EE7B7;
-  --emerald-400: #34D399;   /* Emerald Light — accents, highlights, focus */
+  --emerald-400: #34D399;   /* accent text on concrete — 10.0:1 */
   --emerald-500: #10B981;
   --emerald-600: #059669;
-  --emerald-700: #047857;   /* Main Emerald — primary buttons, active nav */
-  --emerald-800: #065F46;   /* Emerald Dark — hover */
-  --emerald-900: #064E3B;   /* pressed / deep sections */
+  --emerald-700: #047857;   /* primary fill — white text 5.5:1 */
+  --emerald-800: #065F46;
+  --emerald-900: #064E3B;
   --emerald-950: #022C22;
 
-  /* ---- Surfaces (warm light cream) ---- */
-  --bg:            #FBF7EE;   /* page — light cream */
-  --surface-1:     #FFFDF8;   /* cards, sidebar, modals */
-  --surface-2:     #F4EEE1;   /* inputs, metric tiles, table headers */
-  --surface-3:     #ECE4D2;   /* hover rows, selected */
-  --border:        #E4DAC5;   /* decorative dividers */
-  --border-strong: #7A8A7E;   /* 3.2:1 on surface-2 — form-control boundary (WCAG 1.4.11) */
-  --overlay:       rgba(19, 42, 32, 0.45);
+  /* ---- Harvest wheat (secondary accent: labels, numerals, highlights) ---- */
+  --wheat:       #E0B341;   /* 9.8:1 on bg; soot text on wheat 9.8:1 */
+  --wheat-deep:  #B8892A;
+  --wheat-soft:  rgba(224, 179, 65, 0.12);
 
-  /* ---- Text (deep green ink) ---- */
-  --text-primary:   #132A20;  /* 14.2:1 on --bg */
-  --text-secondary: #44584D;  /*  7.2:1 */
-  --text-muted:     #5A6A60;  /*  5.4:1 on bg, 5.0:1 on surface-2 */
-  --text-on-primary:#FFFFFF;  /*  5.5:1 on emerald-700 */
-  --accent-text:    var(--emerald-700);   /* links, active nav, highlights — 5.1:1 on bg */
-  --accent-strong:  var(--emerald-800);
-  --accent-soft:    rgba(4, 120, 87, 0.09);   /* tinted emerald backgrounds */
-  --accent-soft-border: rgba(4, 120, 87, 0.28);
+  /* ---- Concrete (surfaces) ---- */
+  --bg:            #0D0F0D;   /* soot */
+  --surface-1:     #161916;   /* cast concrete — cards */
+  --surface-2:     #1F231F;   /* inputs, tiles, table heads */
+  --surface-3:     #2A2F2A;   /* hover / selected */
+  --border:        #2F352F;   /* formwork seams (decorative) */
+  --border-strong: #747D74;   /* form-control boundary — 3.7:1 on surface-2 */
+  --rule:          #ECE7DA;   /* heavy black/bone rules on posters */
+  --overlay:       rgba(5, 6, 5, 0.78);
 
-  /* ---- Functional / status (always paired with icon + label) ---- */
-  --success:  #147A3A;  --success-bg: rgba(20, 122, 58, 0.10);  --success-border: rgba(20, 122, 58, 0.32);
-  --warning:  #A3500A;  --warning-bg: rgba(217, 119, 6, 0.12);  --warning-border: rgba(163, 80, 10, 0.32);
-  --danger:   #B91C1C;  --danger-bg:  rgba(185, 28, 28, 0.08);  --danger-border:  rgba(185, 28, 28, 0.30);
-  --info:     #036594;  --info-bg:    rgba(3, 101, 148, 0.08);  --info-border:    rgba(3, 101, 148, 0.30);
+  /* ---- Text (bone paper) ---- */
+  --text-primary:   #ECE7DA;  /* 15.6:1 */
+  --text-secondary: #B9B4A6;  /*  9.3:1 */
+  --text-muted:     #8F8B80;  /*  5.7:1 on bg, 4.7:1 on surface-2 */
+  --text-on-primary:#FFFFFF;
+  --text-on-wheat:  #0D0F0D;
+  --accent-text:    var(--emerald-400);
+  --accent-strong:  var(--emerald-300);
+  --accent-soft:    rgba(52, 211, 153, 0.10);
+  --accent-soft-border: rgba(52, 211, 153, 0.35);
 
-  /* ---- Data-viz series (validated: light mode, all-pairs, on --surface-1) ---- */
-  --series-moisture:    #2A78D6;  /* blue  — water */
-  --series-temperature: #EB6834;  /* orange — heat */
-  --series-humidity:    #1BAF7A;  /* aqua  — air (charts also ship a table view) */
-  --viz-grid:  #EAE2D0;
-  --viz-axis:  #5A6A60;
+  /* ---- Status (always with icon + label) ---- */
+  --success:  #4ADE80;  --success-bg: rgba(74, 222, 128, 0.10);  --success-border: rgba(74, 222, 128, 0.40);
+  --warning:  #FB923C;  --warning-bg: rgba(251, 146, 60, 0.10);  --warning-border: rgba(251, 146, 60, 0.45);
+  --danger:   #F87171;  --danger-bg:  rgba(248, 113, 113, 0.10); --danger-border:  rgba(248, 113, 113, 0.45);
+  --info:     #60A5FA;  --info-bg:    rgba(96, 165, 250, 0.10);  --info-border:    rgba(96, 165, 250, 0.45);
 
-  /* ---- Typography ---- */
-  --font-heading: 'Sora', 'Inter', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', 'Noto Sans', sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  /* ---- Data-viz series (validated: dark, all-pairs, on --surface-1) ---- */
+  --series-moisture:    #3987E5;
+  --series-temperature: #D95926;
+  --series-humidity:    #199E70;
+  --viz-grid:  #262B26;
+  --viz-axis:  #8F8B80;
 
-  --fs-xs: 0.75rem;   /* 12 — captions, axis ticks */
-  --fs-sm: 0.875rem;  /* 14 — secondary text, table */
-  --fs-md: 1rem;      /* 16 — body, inputs (no iOS zoom) */
-  --fs-lg: 1.125rem;  /* 18 — card titles */
-  --fs-xl: 1.5rem;    /* 24 — page titles */
-  --fs-2xl: 2rem;     /* 32 — stat values */
-  --fs-hero: clamp(2.25rem, 5vw + 1rem, 3.75rem);
+  /* ---- Typography: monumental condensed display + industrial grotesk + plex mono ---- */
+  --font-heading: 'Big Shoulders Display', 'Oswald', 'Arial Narrow', Impact, sans-serif;
+  --font-body:    'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', 'Noto Sans', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
-  /* ---- Space, radius, elevation, motion ---- */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.75rem;
+  --fs-2xl: 2.25rem;
+  --fs-hero: clamp(3rem, 7vw + 1rem, 7rem);
+
+  /* ---- Space, geometry (brutalist: square corners, hard offset shadows), motion ---- */
   --sp-1: 4px; --sp-2: 8px; --sp-3: 12px; --sp-4: 16px; --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
-  --radius-sm: 6px; --radius-md: 10px; --radius-lg: 14px; --radius-xl: 20px; --radius-full: 999px;
-  --shadow-1: 0 1px 2px rgba(60, 45, 20, .06);
-  --shadow-2: 0 8px 24px rgba(60, 45, 20, .10);
-  --shadow-3: 0 24px 60px rgba(40, 30, 10, .18);
-  --focus-ring: 0 0 0 3px rgba(4, 120, 87, 0.35);
+  --radius-sm: 0; --radius-md: 0; --radius-lg: 0; --radius-xl: 0; --radius-full: 0;
+  --bw: 2px;                                 /* default border weight */
+  --shadow-1: none;
+  --shadow-2: 6px 6px 0 #000;
+  --shadow-3: 10px 10px 0 #000;
+  --shadow-hard: 6px 6px 0 #000;
+  --focus-ring: 0 0 0 3px var(--wheat);
   --ease: cubic-bezier(.2,.7,.2,1);
-  --dur: 160ms;
+  --dur: 120ms;
 
-  --header-h: 60px;
-  --sidebar-w: 248px;
-  --sidebar-w-collapsed: 72px;
-  --touch: 44px;   /* minimum touch target */
+  --header-h: 64px;
+  --sidebar-w: 256px;
+  --sidebar-w-collapsed: 76px;
+  --touch: 44px;
 }
 
 @media (prefers-reduced-motion: reduce) {

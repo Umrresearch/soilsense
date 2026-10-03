@@ -1,27 +1,30 @@
-# Cream & Emerald Design System
+# SoilSense Design System — "Kolkhoz Concrete"
 
-> **Update (Oct 2026): the app now uses a light cream + emerald theme.** The emerald ramp, typography and components below are unchanged. Surfaces, text and status colours moved to the light values in this table (the source of truth is `frontend/src/styles/tokens.css`). The dark-emerald values further down are kept for reference, e.g. for a future dark mode.
+> **Current theme (Oct 2026): dark brutalism × agriculture.** Soviet-modernist concrete language — square slabs, 2 px formwork seams, hard offset shadows, monumental condensed type, numbered sections and mono "plate" labels — applied to a farming product: **emerald** for crop, **harvest wheat** for highlights. Source of truth: `frontend/src/styles/tokens.css` + `brutal.css` (+ `landing.css`).
 
-| Role | Token | Hex | Contrast |
+| Role | Token | Value | Contrast |
 |---|---|---|---|
-| Page background (light cream) | `--bg` | `#FBF7EE` | — |
-| Cards / sidebar / modals | `--surface-1` | `#FFFDF8` | — |
-| Inputs, metric tiles, table heads | `--surface-2` | `#F4EEE1` | — |
-| Hover / selected | `--surface-3` | `#ECE4D2` | — |
-| Divider | `--border` | `#E4DAC5` | decorative |
-| Form-control border | `--border-strong` | `#7A8A7E` | 3.2 : 1 on surface-2 |
-| Text (deep green ink) | `--text-primary` | `#132A20` | 14.2 : 1 |
-| Body / labels | `--text-secondary` | `#44584D` | 7.2 : 1 |
-| Captions | `--text-muted` | `#5A6A60` | 5.4 : 1 |
-| Primary button / links / active nav | `--emerald-700` | `#047857` | white on it 5.5 : 1; on cream 5.1 : 1 |
-| Hover / pressed | `--emerald-800` / `-900` | `#065F46` / `#064E3B` | |
-| Success · Warning · Danger · Info | | `#147A3A` · `#A3500A` · `#B91C1C` · `#036594` | all ≥ 4.3 : 1 on surface-2 |
-| Chart series (moisture · temp · humidity) | | `#2A78D6` · `#EB6834` · `#1BAF7A` | validated light-mode, all-pairs; every chart has a table view |
+| Page (soot) | `--bg` | `#0D0F0D` | — |
+| Cast-concrete slab | `--surface-1` | `#161916` | — |
+| Inputs / tiles / table heads | `--surface-2` | `#1F231F` | — |
+| Formwork seam (decorative) | `--border` | `#2F352F` | — |
+| Form-control border | `--border-strong` | `#747D74` | 3.7 : 1 on surface-2 |
+| Text (bone) / secondary / muted | | `#ECE7DA` / `#B9B4A6` / `#8F8B80` | 15.6 / 9.3 / 5.7 : 1 |
+| Primary fill (crop emerald) | `--emerald-700` | `#047857` | white text 5.5 : 1 |
+| Accent text | `--emerald-400` | `#34D399` | 10.0 : 1 |
+| Harvest wheat | `--wheat` | `#E0B341` | 9.8 : 1 on bg; soot text on wheat 9.8 : 1 |
+| Status (dark-stepped) | | success `#4ADE80` · warning `#FB923C` · danger `#F87171` · info `#60A5FA` | all ≥ 5.7 : 1 |
+| Chart series | | moisture `#3987E5` · temp `#D95926` · humidity `#199E70` | validated dark, all-pairs |
 
-**Dark emerald carries the structure, cream is the canvas.** The sidebar (and mobile tab bar), every stat/KPI tile, the dashboard welcome card, the auth side panel and the landing call-to-action band use deep emerald (`#064E3B` → `#022C22`) with cream text (`#FBF7EE`, ≈ 10.9 : 1). Charts, tables and forms sit on cream panels. On dark tiles, status badges switch to light tints (e.g. success `#BBF7D0`, danger `#FECACA`) to stay readable.
+**Type.** Display **Big Shoulders Display** 800/900, uppercase (monumental, condensed — poster lettering). Body **IBM Plex Sans** 400–600 (industrial grotesk). Labels, buttons and data **IBM Plex Mono**, uppercase with tracking. All self-hosted via `@fontsource` (no Google Fonts request).
+
+**Geometry.** `--radius-*: 0` everywhere; borders 2 px; primary buttons and KPI slabs carry a hard `6px 6px 0 #000` shadow and "press" (translate 4 px, shadow off) when clicked; focus ring is a 3 px wheat outline.
+
+**Composition.** Sidebar is black concrete with a solid emerald active slab and wheat edge; KPI/stat tiles are deep emerald slabs; the dashboard welcome is a wheat poster block with a diagonal emerald band (constructivist); section numbers are outlined wheat numerals (01, 02…). Landing photography (Unsplash) is duotoned — grayscale + emerald or wheat multiply — so mixed sources read as one series; colour returns on hover.
 
 ---
 
+# (Reference) previous palettes
 # (Reference) Dark Emerald Design System
 
 Phase 1 deliverable. Every value here is implemented in `frontend/src/styles/tokens.css`; components reference **roles** (`--surface-1`, `--text-muted`) rather than raw hex, so a palette change happens in one file.

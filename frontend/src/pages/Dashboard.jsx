@@ -15,7 +15,7 @@ import { fmtNum, fmtLitres, timeAgo, moistureStatus, fmtDate } from '../lib/form
 import { Badge, EmptyState, ErrorState, PriorityBadge, Spinner, Alert } from '../components/ui.jsx';
 
 const WMO = { 0: 'Clear', 1: 'Mostly clear', 2: 'Partly cloudy', 3: 'Overcast', 45: 'Fog', 48: 'Fog', 51: 'Drizzle', 53: 'Drizzle', 55: 'Drizzle', 61: 'Rain', 63: 'Rain', 65: 'Heavy rain', 80: 'Showers', 81: 'Showers', 82: 'Heavy showers', 95: 'Thunderstorm' };
-const HEALTH_COLORS = { Good: '#147A3A', Dry: '#D97706', 'Critical — dry': '#B91C1C', Waterlogged: '#036594', 'No data': '#B9AE98' };
+const HEALTH_COLORS = { Good: '#10B981', Dry: '#E0B341', 'Critical — dry': '#F87171', Waterlogged: '#60A5FA', 'No data': '#5C635C' };
 const axis = { stroke: 'var(--viz-axis)', tick: { fill: 'var(--viz-axis)', fontSize: 12 }, tickLine: false, axisLine: false };
 
 /* ------------------------------------------------------------------ small building blocks */
@@ -100,7 +100,7 @@ function FieldHealth({ fields, t }) {
   const data = useMemo(() => {
     const counts = {};
     for (const f of fields) { const k = moistureStatus(f.soil_moisture, t).label; counts[k] = (counts[k] ?? 0) + 1; }
-    return Object.entries(counts).map(([name, value]) => ({ name, value, fill: HEALTH_COLORS[name] ?? '#B9AE98' }))
+    return Object.entries(counts).map(([name, value]) => ({ name, value, fill: HEALTH_COLORS[name] ?? '#5C635C' }))
       .sort((a, b) => b.value - a.value);
   }, [fields, t]);
   return (
@@ -109,7 +109,7 @@ function FieldHealth({ fields, t }) {
         <ResponsiveContainer>
           <PieChart>
             <Pie data={data} dataKey="value" nameKey="name" innerRadius="68%" outerRadius="100%" paddingAngle={data.length > 1 ? 3 : 0}
-              cornerRadius={6} stroke="var(--surface-1)" strokeWidth={2} isAnimationActive={false}>
+              cornerRadius={0} stroke="#000" strokeWidth={3} isAnimationActive={false}>
               {data.map((d) => <Cell key={d.name} fill={d.fill} />)}
             </Pie>
             <Tooltip content={<ChartTip fmt={(v) => `${v} field${v > 1 ? 's' : ''}`} />} />
@@ -128,14 +128,14 @@ function FieldHealth({ fields, t }) {
 
 function SensorGauge({ sensors }) {
   const pct = sensors.total ? Math.round((100 * sensors.online) / sensors.total) : 0;
-  const data = [{ v: sensors.online, fill: 'var(--emerald-700)' }, { v: Math.max(0, sensors.total - sensors.online), fill: '#E4DAC5' }];
+  const data = [{ v: sensors.online, fill: 'var(--emerald-500)' }, { v: Math.max(0, sensors.total - sensors.online), fill: '#2F352F' }];
   return (
     <Panel title="Sensor uptime" sub="Reporting in the last 6 hours">
       <div className="dash-gauge">
         <ResponsiveContainer>
           <PieChart>
             <Pie data={data} dataKey="v" startAngle={180} endAngle={0} cx="50%" cy="100%" innerRadius="150%" outerRadius="195%"
-              stroke="none" cornerRadius={8} isAnimationActive={false}>
+              stroke="none" cornerRadius={0} isAnimationActive={false}>
               {data.map((d, i) => <Cell key={i} fill={d.fill} />)}
             </Pie>
           </PieChart>
@@ -143,8 +143,8 @@ function SensorGauge({ sensors }) {
         <div className="dash-gauge-center"><b className="num">{pct}%</b><span>{sensors.online} of {sensors.total} online</span></div>
       </div>
       <div className="dash-gauge-legend">
-        <span><i style={{ background: 'var(--emerald-700)' }} />Online <b className="num">{sensors.online}</b></span>
-        <span><i style={{ background: '#C9BDA4' }} />Needs check <b className="num">{sensors.stale + sensors.no_data}</b></span>
+        <span><i style={{ background: 'var(--emerald-500)' }} />Online <b className="num">{sensors.online}</b></span>
+        <span><i style={{ background: '#5C635C' }} />Needs check <b className="num">{sensors.stale + sensors.no_data}</b></span>
       </div>
     </Panel>
   );
@@ -163,10 +163,10 @@ function WaterByField({ rows }) {
               <CartesianGrid stroke="var(--viz-grid)" vertical={false} />
               <XAxis dataKey="name" {...axis} interval={0} tickFormatter={(n) => (n.length > 10 ? `${n.slice(0, 9)}…` : n)} />
               <YAxis {...axis} width={40} tickFormatter={(v) => (v >= 1000 ? `${fmtNum(v / 1000, 1)}k` : fmtNum(v, 0))} />
-              <Tooltip content={<ChartTip fmt={(v) => `${fmtNum(v, 1)} kL`} />} cursor={{ fill: 'rgba(19,42,32,0.04)' }} />
-              <Bar dataKey="kL" radius={[8, 8, 8, 8]} maxBarSize={44} isAnimationActive={false}
+              <Tooltip content={<ChartTip fmt={(v) => `${fmtNum(v, 1)} kL`} />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
+              <Bar dataKey="kL" radius={0} maxBarSize={44} isAnimationActive={false}
                 label={{ position: 'top', fontSize: 11, fill: 'var(--text-secondary)', formatter: (v) => (v === max ? fmtNum(v, 0) : '') }}>
-                {data.map((d) => <Cell key={d.name} fill={d.kL === max ? 'var(--emerald-700)' : '#DCD2BE'} />)}
+                {data.map((d) => <Cell key={d.name} fill={d.kL === max ? 'var(--wheat)' : '#3A413A'} />)}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -189,18 +189,18 @@ function MoistureTrend({ daily, t, current, prev }) {
             <AreaChart data={data} margin={{ top: 10, right: 8, left: -18, bottom: 0 }}>
               <defs>
                 <linearGradient id="moistFill" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#2A78D6" stopOpacity={0.28} />
-                  <stop offset="100%" stopColor="#2A78D6" stopOpacity={0} />
+                  <stop offset="0%" stopColor="#3987E5" stopOpacity={0.30} />
+                  <stop offset="100%" stopColor="#3987E5" stopOpacity={0} />
                 </linearGradient>
               </defs>
               <CartesianGrid stroke="var(--viz-grid)" vertical={false} />
               <XAxis dataKey="day" {...axis} minTickGap={24} />
               <YAxis {...axis} width={40} domain={[0, 'auto']} />
-              {t && <ReferenceLine y={t.moisture_low} stroke="#A3500A" strokeDasharray="5 4"
+              {t && <ReferenceLine y={t.moisture_low} stroke="#FB923C" strokeDasharray="5 4"
                 label={{ value: `Irrigate below ${t.moisture_low}%`, position: 'insideBottomRight', fill: 'var(--text-muted)', fontSize: 11 }} />}
               <Tooltip content={<ChartTip fmt={(v) => `${fmtNum(v, 1)}% moisture`} />} cursor={{ stroke: 'var(--border-strong)', strokeDasharray: '3 3' }} />
-              <Area type="monotone" dataKey="avg" stroke="#2A78D6" strokeWidth={2.5} fill="url(#moistFill)" isAnimationActive={false}
-                dot={false} activeDot={{ r: 6, fill: '#2A78D6', stroke: 'var(--surface-1)', strokeWidth: 3 }} />
+              <Area type="monotone" dataKey="avg" stroke="#3987E5" strokeWidth={2.5} fill="url(#moistFill)" isAnimationActive={false}
+                dot={false} activeDot={{ r: 6, fill: '#3987E5', stroke: '#000', strokeWidth: 3 }} />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -212,17 +212,17 @@ function MoistureTrend({ daily, t, current, prev }) {
 function FieldsTable({ fields, t }) {
   const nav = useNavigate();
   return (
-    <Panel title="Your fields" sub="Moisture against the target level" action={<Link to="/app/sensors" className="btn btn-ghost btn-sm">All sensors <ArrowRight aria-hidden /></Link>}>
+    <Panel title="Your fields" sub="Moisture against the target level" action={<Link to="/app/analytics" className="btn btn-ghost btn-sm">All sensors <ArrowRight aria-hidden /></Link>}>
       {fields.length === 0 ? <EmptyState title="No fields yet" action={<Link className="btn btn-primary" to="/app/settings?tab=fields">Add a field</Link>} /> : (
         <ul className="dash-fields">
           {fields.map((f) => {
             const ms = moistureStatus(f.soil_moisture, t);
             const target = t?.moisture_target ?? 32;
             const pct = f.soil_moisture == null ? 0 : Math.min(100, (100 * f.soil_moisture) / target);
-            const bar = { success: 'var(--emerald-700)', warning: '#D97706', danger: '#B91C1C', info: '#036594' }[ms.tone] ?? '#C9BDA4';
+            const bar = { success: '#10B981', warning: '#E0B341', danger: '#F87171', info: '#60A5FA' }[ms.tone] ?? '#5C635C';
             return (
-              <li key={f.field_id} onClick={() => nav(`/app/sensors?field=${f.field_id}`)} tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && nav(`/app/sensors?field=${f.field_id}`)}>
+              <li key={f.field_id} onClick={() => nav(`/app/analytics?field=${f.field_id}`)} tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && nav(`/app/analytics?field=${f.field_id}`)}>
                 <span className="dash-field-avatar"><Sprout aria-hidden /></span>
                 <div className="dash-field-main">
                   <div className="row" style={{ gap: 8, flexWrap: 'nowrap' }}>
@@ -351,7 +351,7 @@ export default function Dashboard() {
         <div className="dash-row dash-row-top">
           <Welcome farmer={farmer} s={s} critical={critical} onPdf={exportPdf} pdfBusy={pdfBusy} />
           <Kpi icon={Droplets} label="Avg soil moisture" value={fmtNum(s.sensors.avg_soil_moisture)} unit="%"
-            delta={<Delta value={moistDelta} unit=" pts" goodWhen="neutral" label="vs 24 h ago" />} foot="vs yesterday" to="/app/sensors" />
+            delta={<Delta value={moistDelta} unit=" pts" goodWhen="neutral" label="vs 24 h ago" />} foot="vs yesterday" to="/app/analytics" />
           <Kpi icon={Gauge} label="Water · 7 days" value={fmtLitres(s.water.litres_7d)}
             delta={<Delta value={waterDelta} goodWhen="down" label="vs previous 7 days" />} foot={`${s.water.sessions_7d} sessions`} to="/app/analytics" />
           <Kpi icon={Lightbulb} label="Pending advice" value={s.pending.total}
@@ -377,9 +377,9 @@ export default function Dashboard() {
         <Weather fieldId={s.fields[0]?.field_id} />
         <Panel title="Right now" sub="Farm averages from online sensors">
           <ul className="dash-mini">
-            <li><span className="dash-mini-icon" style={{ color: '#1F62B3' }}><Droplets aria-hidden /></span>Soil moisture<b className="num">{fmtNum(s.sensors.avg_soil_moisture)}%</b></li>
-            <li><span className="dash-mini-icon" style={{ color: '#C2410C' }}><Thermometer aria-hidden /></span>Temperature<b className="num">{fmtNum(s.sensors.avg_temperature)}°C</b></li>
-            <li><span className="dash-mini-icon" style={{ color: '#147A3A' }}><CloudRain aria-hidden /></span>Humidity<b className="num">{fmtNum(s.sensors.avg_humidity)}%</b></li>
+            <li><span className="dash-mini-icon" style={{ color: '#7DB3F0' }}><Droplets aria-hidden /></span>Soil moisture<b className="num">{fmtNum(s.sensors.avg_soil_moisture)}%</b></li>
+            <li><span className="dash-mini-icon" style={{ color: '#FB923C' }}><Thermometer aria-hidden /></span>Temperature<b className="num">{fmtNum(s.sensors.avg_temperature)}°C</b></li>
+            <li><span className="dash-mini-icon" style={{ color: '#4ADE80' }}><CloudRain aria-hidden /></span>Humidity<b className="num">{fmtNum(s.sensors.avg_humidity)}%</b></li>
             <li><span className="dash-mini-icon"><Activity aria-hidden /></span>Fertilizer · 30 d<b className="num">{fmtNum(s.fertilizer.kg_30d, 0)} kg</b></li>
           </ul>
         </Panel>

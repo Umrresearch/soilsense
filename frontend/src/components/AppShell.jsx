@@ -1,7 +1,7 @@
 import { Suspense, useEffect, useState } from 'react';
 import { NavLink, Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import {
-  LayoutDashboard, Activity, Lightbulb, ChartColumn, Settings, LogOut, Menu, Sprout, PanelLeftClose, PanelLeftOpen, Bell,
+  LayoutDashboard, Lightbulb, ChartColumn, Settings, LogOut, Menu, Sprout, PanelLeftClose, PanelLeftOpen, Bell,
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.jsx';
 import { useApi, useLiveStream } from '../lib/hooks.js';
@@ -10,12 +10,11 @@ import { ErrorBoundary, Spinner } from './ui.jsx';
 
 export const NAV = [
   { to: '/app', label: 'Dashboard', icon: LayoutDashboard, end: true },
-  { to: '/app/sensors', label: 'Sensors', icon: Activity },
+  { to: '/app/analytics', label: 'Analytics', longLabel: 'Analytics & Sensors', icon: ChartColumn },
   { to: '/app/recommendations', label: 'Advice', longLabel: 'Recommendations', icon: Lightbulb, badge: true },
-  { to: '/app/analytics', label: 'Analytics', icon: ChartColumn },
   { to: '/app/settings', label: 'Settings', icon: Settings },
 ];
-const TITLES = { '/app': 'Dashboard', '/app/sensors': 'Sensor data', '/app/recommendations': 'Recommendations', '/app/analytics': 'Analytics', '/app/settings': 'Settings' };
+const TITLES = { '/app': 'Dashboard', '/app/recommendations': 'Recommendations', '/app/analytics': 'Analytics & Sensors', '/app/settings': 'Settings' };
 
 export const Logo = ({ sub = 'Sugarcane advisory' }) => (
   <Link to="/" className="brand" aria-label="SoilSense home">

@@ -11,9 +11,8 @@ import NotFound from './pages/NotFound.jsx';
 
 // chart-heavy pages are code-split so the landing/login pages stay light on slow rural networks
 const Dashboard = lazy(() => import('./pages/Dashboard.jsx'));
-const Sensors = lazy(() => import('./pages/Sensors.jsx'));
 const Recommendations = lazy(() => import('./pages/Recommendations.jsx'));
-const Analytics = lazy(() => import('./pages/Analytics.jsx'));
+const AnalyticsSensors = lazy(() => import('./pages/AnalyticsSensors.jsx'));
 const Settings = lazy(() => import('./pages/Settings.jsx'));
 
 function RequireAuth({ children }) {
@@ -22,6 +21,12 @@ function RequireAuth({ children }) {
   if (!ready) return <Spinner large label="Checking your session…" />;
   if (!farmer) return <Navigate to="/login" replace state={{ from: loc.pathname }} />;
   return children;
+}
+
+// old /app/sensors links → combined page, keeping ?field=
+function SensorsRedirect() {
+  const loc = useLocation();
+  return <Navigate to={`/app/analytics${loc.search}`} replace />;
 }
 
 function PublicOnly({ children }) {
@@ -42,9 +47,9 @@ export default function App() {
           <Route path="/verify-email" element={<VerifyEmail />} />
           <Route path="/app" element={<RequireAuth><AppShell /></RequireAuth>}>
             <Route index element={<Dashboard />} />
-            <Route path="sensors" element={<Sensors />} />
+            <Route path="sensors" element={<SensorsRedirect />} />
             <Route path="recommendations" element={<Recommendations />} />
-            <Route path="analytics" element={<Analytics />} />
+            <Route path="analytics" element={<AnalyticsSensors />} />
             <Route path="settings" element={<Settings />} />
           </Route>
           <Route path="*" element={<NotFound />} />

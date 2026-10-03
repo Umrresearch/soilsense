@@ -22,6 +22,8 @@ services:
         sync: false             # paste the Neon pooled connection string when prompted
       - key: DATABASE_SSL
         value: "true"
+      - key: DEMO_FEED          # synthetic readings keep the demo sensors "online"; remove when real devices report
+        value: "true"
       - key: JWT_SECRET
         generateValue: true
       - key: INGEST_API_KEY

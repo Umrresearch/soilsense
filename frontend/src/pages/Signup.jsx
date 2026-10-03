@@ -72,7 +72,7 @@ export default function Signup() {
           <p className="secondary">Your account is ready and you are logged in. Keep your Farmer ID — you can log in with it.</p>
           <div className="card" style={{ width: '100%', background: 'var(--surface-2)' }}>
             <div className="stat-label" style={{ justifyContent: 'center' }}>Your Farmer ID</div>
-            <div className="stat-value" style={{ fontSize: '2.5rem', color: 'var(--emerald-700)', margin: '6px 0' }}>{done.farmer.farmer_id}</div>
+            <div className="stat-value" style={{ fontSize: '2.5rem', color: 'var(--wheat)', margin: '6px 0' }}>{done.farmer.farmer_id}</div>
             <Button size="sm" variant="ghost" icon={Copy} onClick={() => navigator.clipboard?.writeText(done.farmer.farmer_id)}>Copy</Button>
           </div>
           <p className="muted" style={{ fontSize: 'var(--fs-sm)' }}>We sent a verification link to <b>{done.farmer.email}</b> (optional).</p>

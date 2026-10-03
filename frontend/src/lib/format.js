@@ -27,9 +27,9 @@ export const fmtTick = (ts, period) => {
 };
 
 export const SENSOR_META = {
-  SOIL_MOISTURE: { label: 'Soil moisture', short: 'Moisture', unit: '%', color: 'var(--series-moisture)', hex: '#2A78D6' },
-  TEMPERATURE:   { label: 'Temperature',   short: 'Temp',     unit: '°C', color: 'var(--series-temperature)', hex: '#EB6834' },
-  HUMIDITY:      { label: 'Humidity',      short: 'Humidity', unit: '%', color: 'var(--series-humidity)', hex: '#1BAF7A' },
+  SOIL_MOISTURE: { label: 'Soil moisture', short: 'Moisture', unit: '%', color: 'var(--series-moisture)', hex: '#3987E5' },
+  TEMPERATURE:   { label: 'Temperature',   short: 'Temp',     unit: '°C', color: 'var(--series-temperature)', hex: '#D95926' },
+  HUMIDITY:      { label: 'Humidity',      short: 'Humidity', unit: '%', color: 'var(--series-humidity)', hex: '#199E70' },
 };
 
 export const PRIORITY = {

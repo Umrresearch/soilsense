@@ -219,7 +219,8 @@ test('dashboard summary / alerts / analytics (demo farmer)', async () => {
   assert.equal(r.data.sensors.total, 9);
   assert.ok(r.data.pending.total > 0);
   r = await api('GET', '/api/dashboard/FRM-0051/alerts', { auth: demoToken });
-  assert.ok(r.data.count > 0);
+  assert.ok(Array.isArray(r.data.alerts) && Array.isArray(r.data.sensorIssues));
+  assert.equal(r.data.count, r.data.alerts.length + r.data.sensorIssues.length);
   r = await api('GET', '/api/dashboard/FRM-0001/analytics?period=month', { auth: demoToken });
   assert.equal(r.status, 403);
   const login = await api('POST', '/api/auth/login', { auth: null, body: { identifier: 'rajendra.pundir@farmerconnect.in', password: 'S5k%LCh6kKUd' } });

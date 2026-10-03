@@ -60,7 +60,7 @@ export function MetricChart({ data, dataKey = 'value', name, unit, color, period
       <ResponsiveContainer>
         <LineChart data={data} margin={{ top: 8, right: 12, bottom: 0, left: -12 }}>
           <CartesianGrid stroke="var(--viz-grid)" vertical={false} />
-          {band && <ReferenceArea y1={band[0]} y2={band[1]} fill="#147A3A" fillOpacity={0.07} stroke="none" ifOverflow="extendDomain" />}
+          {band && <ReferenceArea y1={band[0]} y2={band[1]} fill="#4ADE80" fillOpacity={0.06} stroke="none" ifOverflow="extendDomain" />}
           {lines.map((l) => (
             <ReferenceLine key={l.label} y={l.y} stroke={l.color} strokeDasharray="5 4" strokeWidth={1.5} ifOverflow="extendDomain"
               label={{ value: l.label, position: 'insideTopRight', fill: 'var(--text-muted)', fontSize: 11 }} />
@@ -115,7 +115,7 @@ export function Bars({ data, xKey, yKey, name, unit, color = 'var(--series-moist
               <YAxis {...axisProps} tickFormatter={yFmt} width={56} />
             </>
           )}
-          <Tooltip content={<SeriesTooltip unit={unit} labelFmt={(l) => (xFmt ? xFmt(l) : l)} />} cursor={{ fill: 'rgba(19,42,32,0.05)' }} />
+          <Tooltip content={<SeriesTooltip unit={unit} labelFmt={(l) => (xFmt ? xFmt(l) : l)} />} cursor={{ fill: 'rgba(255,255,255,0.04)' }} />
           <Bar dataKey={yKey} name={name} unit={unit} fill={color} radius={vertical ? [0, 4, 4, 0] : [4, 4, 0, 0]} maxBarSize={36} isAnimationActive={false} />
         </BarChart>
       </ResponsiveContainer>
