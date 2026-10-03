@@ -170,7 +170,7 @@ export default function Landing() {
       <section className="lp-strip" id="field">
         <Photo photo={PHOTOS.harvest} w={800} h={1000} tone="natural" caption="Fig. 06 — Planting season" />
         <Photo photo={PHOTOS.sprouts} w={800} h={1000} tone="natural" caption="Fig. 07 — First growth" />
-        <Photo photo={PHOTOS.paddy} w={800} h={1000} tone="natural" caption="Fig. 08 — The people it serves" />
+        <Photo photo={PHOTOS.paddy} w={800} h={1000} tone="natural" caption="Fig. 08 — Drip-fed" />
       </section>
 
       {/* ---------------- CTA ---------------- */}

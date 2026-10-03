@@ -8,9 +8,9 @@ export const PHOTOS = {
   planting:   { id: 'photo-1590682680695-43b964a3ae17', alt: 'Hands in dark soil planting a seedling', by: 'GreenForce Staffing', page: 'https://unsplash.com/photos/bYZn_C-RswQ' },
   soil:       { id: 'photo-1492496913980-501348b61469', alt: 'Cupped hands holding a mound of rich soil', by: 'Gabriel Jimenez', page: 'https://unsplash.com/photos/jin4W1HqgL4' },
   dew:        { id: 'photo-1446608943998-cbd52b140335', alt: 'Water droplets resting on a green leaf', by: 'dan carlson', page: 'https://unsplash.com/photos/G86MS2ZsiJA' },
-  harvest:    { id: 'photo-1530507629858-e4977d30e9e0', alt: 'Farmer carrying a bundle of green seedlings', by: 'Nandhu Kumar', page: 'https://unsplash.com/photos/5NGTf4oD8RA' },
+  harvest:    { id: 'photo-1752775312083-1cefe2f93358', alt: 'A young plant growing out of brown soil', by: 'Sercan Naya', page: 'https://unsplash.com/photos/dnKOzWK2Ue0' },
   sprouts:    { id: 'photo-1586771107445-d3ca888129ff', alt: 'Young green sprouts in furrowed soil under low sun', by: 'Jan Kopřiva', page: 'https://unsplash.com/photos/LTMaAwxanGk' },
-  paddy:      { id: 'photo-1542911882-c7100ccf771b', alt: 'Farmer walking through a flooded field of young plants', by: 'Foto Murthy', page: 'https://unsplash.com/photos/lXVWulsnNQE' },
+  paddy:      { id: 'photo-1662392559315-fb7035900d1f', alt: 'A seedling growing beside a drip irrigation line', by: 'Eric Brehm', page: 'https://unsplash.com/photos/fZDIGIZ1e8E' },
   aerial:     { id: 'photo-1525858628969-2c3e8d8e1b42', alt: 'Aerial view of green farmland', by: 'Ivan Bandura', page: 'https://unsplash.com/photos/g_1_FXigeGc' },
 };
 
