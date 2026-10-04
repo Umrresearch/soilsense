@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import {
-  Droplets, Thermometer, CloudRain, FlaskConical, ChartColumn, WifiOff, Download, ArrowRight, ArrowDownRight, Lightbulb, ShieldCheck, Smartphone,
+  Droplets, Thermometer, CloudRain, FlaskConical, ChartColumn, WifiOff, Download, ArrowRight, Lightbulb,
 } from 'lucide-react';
 import { Logo } from '../components/AppShell.jsx';
 import { useAuth } from '../context/AuthContext.jsx';
@@ -15,20 +15,35 @@ function Photo({ photo, w = 1200, h, className = '', tone = 'emerald', caption, 
   );
 }
 
+const STEPS = [
+  { n: '01', title: 'Sensors report', text: 'Probes in each field send moisture, temperature and humidity. Gaps are recorded, not hidden.' },
+  { n: '02', title: 'Rules compare', text: 'Readings are checked against your thresholds, the weather forecast and your latest soil test.' },
+  { n: '03', title: 'You decide', text: 'Clear orders in litres, pumping hours and kilos. Mark them done and they are logged.' },
+];
+
 const FEATURES = [
-  { n: '01', icon: Droplets, title: 'Live field sensors', text: 'Soil moisture, temperature and humidity from every plot, streamed to your phone.' },
-  { n: '02', icon: Lightbulb, title: 'Irrigation orders', text: 'When to water and how much — in litres and pumping hours, never jargon.' },
-  { n: '03', icon: FlaskConical, title: 'Fertilizer doses', text: 'Urea, DAP and MOP quantities from your soil test, split into safe applications.' },
-  { n: '04', icon: WifiOff, title: 'Honest about gaps', text: 'If a sensor drops out the advice says so and uses the last good reading.' },
-  { n: '05', icon: ChartColumn, title: 'Analytics & history', text: 'Water use, trends and your yield against the district, season after season.' },
-  { n: '06', icon: Download, title: 'Records that last', text: 'Export to CSV or a one-page PDF for the sugar mill, the bank or the co-operative.' },
+  { icon: Droplets, title: 'Live sensors', text: 'Every plot, streamed to your phone.' },
+  { icon: Lightbulb, title: 'Irrigation orders', text: 'When to water and exactly how much.' },
+  { icon: FlaskConical, title: 'Fertilizer doses', text: 'Urea, DAP and MOP from your soil test.' },
+  { icon: WifiOff, title: 'Honest about gaps', text: 'Says so when a sensor drops out.' },
+  { icon: ChartColumn, title: 'Analytics', text: 'Water use, trends and yield history.' },
+  { icon: Download, title: 'Exports', text: 'CSV or one-page PDF reports.' },
 ];
 
 const STATS = [
-  { v: '50', l: 'Farmers in the pilot' },
-  { v: '133', l: 'Fields under watch' },
-  { v: '399', l: 'Sensors reporting' },
-  { v: '3,000+', l: 'Seasons of crop records' },
+  { v: '50', l: 'Farmers' },
+  { v: '133', l: 'Fields' },
+  { v: '399', l: 'Sensors' },
+  { v: '3k+', l: 'Seasons' },
+];
+
+const STRIP = [
+  ['pivot', 'Fig. 02 — Irrigation'],
+  ['soil', 'Fig. 03 — Soil first'],
+  ['dew', 'Fig. 04 — Every drop'],
+  ['harvest', 'Fig. 05 — New growth'],
+  ['sprouts', 'Fig. 06 — Furrows'],
+  ['paddy', 'Fig. 07 — Drip-fed'],
 ];
 
 export default function Landing() {
@@ -41,9 +56,8 @@ export default function Landing() {
       <nav className="lp-nav">
         <Logo />
         <div className="lp-nav-links">
-          <a href="#system"><span>01</span> System</a>
-          <a href="#method"><span>02</span> Method</a>
-          <a href="#field"><span>03</span> Field</a>
+          <a href="#how"><span>01</span> How it works</a>
+          <a href="#field"><span>02</span> Field</a>
         </div>
         <div className="spacer" />
         {farmer ? <Link className="btn btn-wheat" to="/app">Dashboard</Link> : (
@@ -57,25 +71,30 @@ export default function Landing() {
       {/* ---------------- hero ---------------- */}
       <header className="lp-hero">
         <div className="lp-hero-copy">
-          <span className="lp-kicker">SoilSense · Sugarcane advisory · Est. 2026</span>
+          <span className="lp-kicker">SoilSense · Sugarcane advisory</span>
           <h1>
             Water the cane<br />
             <em>at the right</em><br />
             hour.
           </h1>
           <p className="lp-lead">
-            Sensors in the soil. Plain advice on your phone. SoilSense turns moisture, heat and humidity readings into
-            exact irrigation and fertilizer orders — so every litre and every kilo does its job.
+            Sensors in the soil, plain advice on your phone. SoilSense turns moisture, heat and humidity readings into
+            exact irrigation and fertilizer orders.
           </p>
           <div className="lp-cta-row">
             <Link className="btn btn-primary btn-lg" to={primary.to}>{primary.label} <ArrowRight aria-hidden /></Link>
             {!farmer && <Link className="btn btn-lg lp-btn-outline" to="/login">I have an account</Link>}
           </div>
           <p className="lp-demo">Demo login — <span>demo@soilsense.in</span> / <span>Demo@1234</span></p>
+          <dl className="lp-stats">
+            {STATS.map((s) => (
+              <div key={s.l}><dt>{s.l}</dt><dd>{s.v}</dd></div>
+            ))}
+          </dl>
         </div>
 
         <div className="lp-hero-visual">
-          <Photo photo={PHOTOS.rows} w={1100} h={1300} className="lp-hero-photo" tone="natural" eager caption="Fig. 01 — Rows at dusk" />
+          <Photo photo={PHOTOS.rows} w={1000} h={1100} className="lp-hero-photo" tone="natural" eager caption="Fig. 01 — Rows at dusk" />
           <div className="lp-reading" aria-label="Example recommendation">
             <div className="lp-reading-head"><span>North plot · FLD-0131</span><span className="lp-tag">High</span></div>
             <div className="lp-reading-action">Irrigate today<br /><b>650 kL</b> · 13 h pumping</div>
@@ -97,87 +116,40 @@ export default function Landing() {
         </div>
       </div>
 
-      {/* ---------------- stats ---------------- */}
-      <section className="lp-stats">
-        {STATS.map((s) => (
-          <div key={s.l}><b>{s.v}</b><span>{s.l}</span></div>
-        ))}
-      </section>
-
-      {/* ---------------- system / features mosaic ---------------- */}
-      <section className="lp-section" id="system">
+      {/* ---------------- how it works (system + method) ---------------- */}
+      <section className="lp-section" id="how">
         <div className="lp-section-head">
           <span className="lp-index">01</span>
-          <h2>The system</h2>
-          <p>Built for phones with weak signal: big buttons, plain words, and advice that always explains why.</p>
+          <h2>How it works</h2>
         </div>
-        <div className="lp-mosaic">
-          {FEATURES.slice(0, 3).map((f) => (
-            <article className="lp-feature" key={f.n}>
-              <span className="lp-feature-n">{f.n}</span>
-              <f.icon aria-hidden />
-              <h3>{f.title}</h3>
-              <p>{f.text}</p>
-            </article>
-          ))}
-          <Photo photo={PHOTOS.pivot} w={900} h={700} className="lp-mosaic-photo" tone="natural" caption="Fig. 02 — Irrigation, measured not guessed" />
-          {FEATURES.slice(3).map((f) => (
-            <article className="lp-feature" key={f.n}>
-              <span className="lp-feature-n">{f.n}</span>
-              <f.icon aria-hidden />
-              <h3>{f.title}</h3>
-              <p>{f.text}</p>
-            </article>
-          ))}
-          <Photo photo={PHOTOS.planting} w={900} h={700} className="lp-mosaic-photo" tone="natural" caption="Fig. 03 — Every seedling counts" />
+        <div className="lp-how">
+          <ol className="lp-steps">
+            {STEPS.map((st) => (
+              <li key={st.n}><b>{st.n}</b><div><h3>{st.title}</h3><p>{st.text}</p></div></li>
+            ))}
+          </ol>
+          <div className="lp-features">
+            {FEATURES.map((f) => (
+              <article className="lp-feature" key={f.title}>
+                <f.icon aria-hidden />
+                <div><h3>{f.title}</h3><p>{f.text}</p></div>
+              </article>
+            ))}
+          </div>
         </div>
-      </section>
-
-      {/* ---------------- concrete × crop manifesto ---------------- */}
-      <section className="lp-manifesto">
-        <Photo photo={PHOTOS.soil} w={1000} h={1200} className="lp-manifesto-a" tone="natural" caption="Fig. 04 — Soil first" />
-        <div className="lp-manifesto-copy">
-          <span className="lp-index">§</span>
-          <h2>Start with the soil.<br /><em>Grow from the data.</em></h2>
-          <p>
-            Good harvests start underground. SoilSense listens to the soil around the clock and keeps an honest record:
-            every reading kept, every decision logged, nothing silently guessed.
-          </p>
-          <ul className="lp-checks">
-            <li><ShieldCheck aria-hidden /> Passwords hashed, data scoped to each farmer</li>
-            <li><Smartphone aria-hidden /> Works in any phone browser, no app install</li>
-            <li><ArrowDownRight aria-hidden /> Missing sensor data recorded, never invented</li>
-          </ul>
-        </div>
-        <Photo photo={PHOTOS.dew} w={900} h={700} className="lp-manifesto-b" tone="natural" caption="Fig. 05 — Every drop" />
-      </section>
-
-      {/* ---------------- method ---------------- */}
-      <section className="lp-section lp-method" id="method">
-        <div className="lp-section-head">
-          <span className="lp-index">02</span>
-          <h2>The method</h2>
-          <p>Three steps from sensor to decision.</p>
-        </div>
-        <ol className="lp-steps">
-          <li><b>01</b><h3>Sensors report</h3><p>Probes in each field send readings every few minutes. Gaps are recorded, not hidden.</p></li>
-          <li><b>02</b><h3>Rules compare</h3><p>Readings are checked against thresholds you set, plus your latest soil test.</p></li>
-          <li><b>03</b><h3>You decide</h3><p>Mark advice as done or dismiss it. Applied actions are logged automatically.</p></li>
-        </ol>
       </section>
 
       {/* ---------------- field strip ---------------- */}
-      <section className="lp-strip" id="field">
-        <Photo photo={PHOTOS.harvest} w={800} h={1000} tone="natural" caption="Fig. 06 — Planting season" />
-        <Photo photo={PHOTOS.sprouts} w={800} h={1000} tone="natural" caption="Fig. 07 — First growth" />
-        <Photo photo={PHOTOS.paddy} w={800} h={1000} tone="natural" caption="Fig. 08 — Drip-fed" />
+      <section className="lp-strip" id="field" aria-label="In the field">
+        {STRIP.map(([key, cap]) => (
+          <Photo key={key} photo={PHOTOS[key]} w={600} h={720} tone="natural" caption={cap} />
+        ))}
       </section>
 
       {/* ---------------- CTA ---------------- */}
       <section className="lp-cta">
-        <Photo photo={PHOTOS.aerial} w={1800} h={800} className="lp-cta-bg" tone="emerald" />
+        <Photo photo={PHOTOS.aerial} w={1800} h={600} className="lp-cta-bg" tone="emerald" />
         <div className="lp-cta-inner">
-          <span className="lp-index">03</span>
           <h2>Register your field.</h2>
           <p>One minute. A Farmer ID instantly. Advice from the first reading.</p>
           <Link className="btn btn-wheat btn-lg" to={primary.to}>{primary.label} <ArrowRight aria-hidden /></Link>
@@ -186,23 +158,16 @@ export default function Landing() {
 
       {/* ---------------- footer ---------------- */}
       <footer className="lp-footer">
-        <div className="lp-footer-grid">
-          <div>
-            <Logo />
-            <p>SoilSense — Smart Sugarcane Farm Advisory. Advice is indicative; confirm with your local Krishi Vigyan Kendra.</p>
-          </div>
-          <div>
-            <h4>Platform</h4>
-            <Link to="/signup">Register</Link><Link to="/login">Log in</Link><a href="#system">System</a><a href="#method">Method</a>
-          </div>
-          <div className="lp-credits">
-            <h4>Photography</h4>
-            <p>Via Unsplash: {[...new Map(Object.values(PHOTOS).map((x) => [x.by, x])).values()].map((p, i, a) => (
-              <span key={p.id}><a href={p.page} target="_blank" rel="noreferrer">{p.by}</a>{i < a.length - 1 ? ', ' : ''}</span>
-            ))}.</p>
-          </div>
+        <div className="lp-footer-row">
+          <Logo />
+          <nav><Link to="/signup">Register</Link><Link to="/login">Log in</Link><a href="#how">How it works</a></nav>
+          <span className="lp-footer-base">© {new Date().getFullYear()} SoilSense</span>
         </div>
-        <div className="lp-footer-base">© {new Date().getFullYear()} SoilSense · Smart sugarcane advisory</div>
+        <p className="lp-credits">
+          Advice is indicative; confirm with your local agriculture extension office. Photos via Unsplash: {[...new Map(Object.values(PHOTOS).map((x) => [x.by, x])).values()].map((p, i, a) => (
+            <span key={p.id}><a href={p.page} target="_blank" rel="noreferrer">{p.by}</a>{i < a.length - 1 ? ', ' : ''}</span>
+          ))}.
+        </p>
       </footer>
     </div>
   );

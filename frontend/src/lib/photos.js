@@ -5,7 +5,6 @@ const CDN = 'https://images.unsplash.com/';
 export const PHOTOS = {
   rows:       { id: 'photo-1560493676-04071c5f467b', alt: 'Long rows of green crops running to the horizon at sunset', by: 'Dan Meyers', page: 'https://unsplash.com/photos/IQVFVH0ajag' },
   pivot:      { id: 'photo-1692369584496-3216a88f94c1', alt: 'Centre-pivot irrigation spraying water over a green crop', by: 'Lumin Osity', page: 'https://unsplash.com/photos/6DMht7wYt6g' },
-  planting:   { id: 'photo-1590682680695-43b964a3ae17', alt: 'Hands in dark soil planting a seedling', by: 'GreenForce Staffing', page: 'https://unsplash.com/photos/bYZn_C-RswQ' },
   soil:       { id: 'photo-1492496913980-501348b61469', alt: 'Cupped hands holding a mound of rich soil', by: 'Gabriel Jimenez', page: 'https://unsplash.com/photos/jin4W1HqgL4' },
   dew:        { id: 'photo-1446608943998-cbd52b140335', alt: 'Water droplets resting on a green leaf', by: 'dan carlson', page: 'https://unsplash.com/photos/G86MS2ZsiJA' },
   harvest:    { id: 'photo-1752775312083-1cefe2f93358', alt: 'A young plant growing out of brown soil', by: 'Sercan Naya', page: 'https://unsplash.com/photos/dnKOzWK2Ue0' },
