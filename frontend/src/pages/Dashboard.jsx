@@ -1,3 +1,4 @@
+import DashboardDetails from './DashboardDetails.jsx';
 import { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -212,7 +213,7 @@ function MoistureTrend({ daily, t, current, prev }) {
 function FieldsTable({ fields, t }) {
   const nav = useNavigate();
   return (
-    <Panel title="Your fields" sub="Moisture against the target level" action={<Link to="/app/analytics" className="btn btn-ghost btn-sm">All sensors <ArrowRight aria-hidden /></Link>}>
+    <Panel title="Your fields" sub="Moisture against the target level" action={<Link to="/app#sensors" className="btn btn-ghost btn-sm">All sensors <ArrowRight aria-hidden /></Link>}>
       {fields.length === 0 ? <EmptyState title="No fields yet" action={<Link className="btn btn-primary" to="/app/settings?tab=fields">Add a field</Link>} /> : (
         <ul className="dash-fields">
           {fields.map((f) => {
@@ -221,8 +222,8 @@ function FieldsTable({ fields, t }) {
             const pct = f.soil_moisture == null ? 0 : Math.min(100, (100 * f.soil_moisture) / target);
             const bar = { success: '#10B981', warning: '#E0B341', danger: '#F87171', info: '#60A5FA' }[ms.tone] ?? '#5C635C';
             return (
-              <li key={f.field_id} onClick={() => nav(`/app/analytics?field=${f.field_id}`)} tabIndex={0}
-                onKeyDown={(e) => e.key === 'Enter' && nav(`/app/analytics?field=${f.field_id}`)}>
+              <li key={f.field_id} onClick={() => nav(`/app?field=${f.field_id}#sensors`)} tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && nav(`/app?field=${f.field_id}#sensors`)}>
                 <span className="dash-field-avatar"><Sprout aria-hidden /></span>
                 <div className="dash-field-main">
                   <div className="row" style={{ gap: 8, flexWrap: 'nowrap' }}>
@@ -346,14 +347,15 @@ export default function Dashboard() {
   };
 
   return (
+    <>
     <div className="dash">
       <div className="dash-main">
         <div className="dash-row dash-row-top">
           <Welcome farmer={farmer} s={s} critical={critical} onPdf={exportPdf} pdfBusy={pdfBusy} />
           <Kpi icon={Droplets} label="Avg soil moisture" value={fmtNum(s.sensors.avg_soil_moisture)} unit="%"
-            delta={<Delta value={moistDelta} unit=" pts" goodWhen="neutral" label="vs 24 h ago" />} foot="vs yesterday" to="/app/analytics" />
+            delta={<Delta value={moistDelta} unit=" pts" goodWhen="neutral" label="vs 24 h ago" />} foot="vs yesterday" to="/app#sensors" />
           <Kpi icon={Gauge} label="Water · 7 days" value={fmtLitres(s.water.litres_7d)}
-            delta={<Delta value={waterDelta} goodWhen="down" label="vs previous 7 days" />} foot={`${s.water.sessions_7d} sessions`} to="/app/analytics" />
+            delta={<Delta value={waterDelta} goodWhen="down" label="vs previous 7 days" />} foot={`${s.water.sessions_7d} sessions`} to="/app#analytics" />
           <Kpi icon={Lightbulb} label="Pending advice" value={s.pending.total}
             delta={urgent > 0 ? <span className="dash-delta is-bad"><TriangleAlert aria-hidden />{urgent} urgent</span> : <span className="dash-delta is-good">0 urgent</span>}
             foot={`${s.trend?.applied_7d ?? 0} done this week`} to="/app/recommendations" />
@@ -391,6 +393,8 @@ export default function Dashboard() {
         </div>
       </aside>
     </div>
+    <DashboardDetails />
+    </>
   );
 }
 

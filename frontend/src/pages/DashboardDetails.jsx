@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Activity, ChartColumn } from 'lucide-react';
 import SensorsSection from './Sensors.jsx';
 import AnalyticsSection from './Analytics.jsx';
@@ -8,9 +9,10 @@ const SECTIONS = [
   { id: 'analytics', n: '02', label: 'Farm analytics', sub: 'Trends, water, fertilizer, yield and field comparison', icon: ChartColumn },
 ];
 
-/** One page for both live sensor data and historical analytics, with a sticky section bar. */
-export default function AnalyticsSensors() {
+/** Live sensors + farm analytics, shown below the dashboard overview with a sticky section bar. */
+export default function DashboardDetails() {
   const [active, setActive] = useState('sensors');
+  const loc = useLocation();
 
   // highlight the section currently in view
   useEffect(() => {
@@ -24,13 +26,24 @@ export default function AnalyticsSensors() {
     return () => io.disconnect();
   }, []);
 
-  const jump = (id) => {
+  const jump = (id, behavior = 'smooth') => {
     const el = document.getElementById(id);
-    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 130, behavior: 'smooth' });
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 130, behavior });
   };
+
+  // /app#sensors, /app?field=X#sensors, /app#analytics → scroll to that section
+  useEffect(() => {
+    const id = loc.hash.slice(1);
+    if (!SECTIONS.some((s) => s.id === id)) return;
+    // charts load async and push content down, so settle twice. Not cancelled on hash change:
+    // picking a field rewrites ?field= and drops the hash, which must not abort the jump.
+    setTimeout(() => jump(id), 150);
+    setTimeout(() => jump(id, 'auto'), 1200);
+  }, [loc.hash]);
 
   return (
     <>
+      <div className="dash-details">
       <nav className="as-bar" aria-label="Page sections">
         {SECTIONS.map((s) => (
           <button key={s.id} type="button" className={active === s.id ? 'is-active' : ''} onClick={() => jump(s.id)} aria-current={active === s.id ? 'true' : undefined}>
@@ -51,6 +64,7 @@ export default function AnalyticsSensors() {
           <div className="as-body">{s.id === 'sensors' ? <SensorsSection /> : <AnalyticsSection />}</div>
         </section>
       ))}
+      </div>
     </>
   );
 }
